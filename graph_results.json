@@ -1,0 +1,59 @@
+{
+  "model": "Cora GraphConv",
+  "family": "Graph message passing",
+  "checkpoint_source": "https://huggingface.co/Anormalmaniac/cora_graphconv",
+  "operator_source": "https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.nn.conv.GraphConv.html",
+  "dataset_source": "https://linqs-data.soe.ucsc.edu/public/lbc/cora.tgz",
+  "checkpoint": "weights\\graphconv\\best_model.pt",
+  "sha256": "10fbc8e813ed493f69946f9aaeea7c62526635696d38cd273bf9a3cdbd76aaf7",
+  "scope": "Standalone replay of checkpoint block 0 GraphConv with learned input projection",
+  "input": {
+    "node": "31336",
+    "neighbors": [
+      "10531",
+      "31349",
+      "31353",
+      "686532",
+      "1129442"
+    ],
+    "feature_width": 1433,
+    "hidden_width": 64,
+    "graph": "Undirected Cora citation edges with self excluded from the neighbor sum"
+  },
+  "comparison": "Channel 0 of W_rel * sum(adjacent hidden states) + W_root * own hidden state + bias",
+  "reference_contributions_channel_0": [
+    {
+      "node": "10531",
+      "contribution": -0.015618879348039627
+    },
+    {
+      "node": "31349",
+      "contribution": 0.013587513007223606
+    },
+    {
+      "node": "31353",
+      "contribution": 0.020423242822289467
+    },
+    {
+      "node": "686532",
+      "contribution": -0.08355166763067245
+    },
+    {
+      "node": "1129442",
+      "contribution": 0.015314288437366486
+    }
+  ],
+  "root_contribution_channel_0": -0.04738270491361618,
+  "bias_channel_0": 0.021798009052872658,
+  "output_channel_0": -0.07543021440505981,
+  "edge_omission": {
+    "omitted_node": "10531",
+    "output_channel_0": -0.05981134623289108,
+    "change_channel_0": 0.015618868172168732
+  },
+  "verification": {
+    "channels_checked": 64,
+    "max_absolute_decomposition_error": 2.384185791015625e-07,
+    "max_absolute_edge_error": 1.1920928955078125e-07
+  }
+}

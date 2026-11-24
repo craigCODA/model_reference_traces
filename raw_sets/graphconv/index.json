@@ -1,0 +1,68 @@
+{
+  "model": "Cora GraphConv",
+  "scope": "The five parameters of the input projection and first GraphConv used in the trace.",
+  "checkpoint": {
+    "path": "weights/graphconv/best_model.pt",
+    "source": "https://huggingface.co/Anormalmaniac/cora_graphconv",
+    "sha256": "10fbc8e813ed493f69946f9aaeea7c62526635696d38cd273bf9a3cdbd76aaf7"
+  },
+  "scalar_count": 100032,
+  "array": {
+    "path": "values.npy",
+    "format": "npy",
+    "dtype": "<f4",
+    "shape": [
+      100032
+    ]
+  },
+  "components": [
+    {
+      "original_key": "input_proj.weight",
+      "shape": [
+        64,
+        1433
+      ],
+      "dtype": "<f4",
+      "scalar_start": 0,
+      "scalar_stop_exclusive": 91712
+    },
+    {
+      "original_key": "input_proj.bias",
+      "shape": [
+        64
+      ],
+      "dtype": "<f4",
+      "scalar_start": 91712,
+      "scalar_stop_exclusive": 91776
+    },
+    {
+      "original_key": "blocks.0.conv.lin_rel.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "<f4",
+      "scalar_start": 91776,
+      "scalar_stop_exclusive": 95872
+    },
+    {
+      "original_key": "blocks.0.conv.lin_rel.bias",
+      "shape": [
+        64
+      ],
+      "dtype": "<f4",
+      "scalar_start": 95872,
+      "scalar_stop_exclusive": 95936
+    },
+    {
+      "original_key": "blocks.0.conv.lin_root.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "<f4",
+      "scalar_start": 95936,
+      "scalar_stop_exclusive": 100032
+    }
+  ]
+}

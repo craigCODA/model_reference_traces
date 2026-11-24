@@ -1,0 +1,2368 @@
+{
+  "opencv_haar": {
+    "model": "OpenCV 4.12.0 frontal-face Haar cascade (haarcascade_frontalface_default.xml)",
+    "checkpoint": {
+      "path": "weights/opencv-haar/haarcascade_frontalface_default.xml",
+      "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/data/haarcascades/haarcascade_frontalface_default.xml",
+      "sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0",
+      "size_bytes": 930127
+    },
+    "probe_image": {
+      "path": "weights/opencv-haar/astronaut.png",
+      "source_url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.25.2/skimage/data/astronaut.png",
+      "sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5",
+      "size_bytes": 791555
+    },
+    "probe_image_documentation": "https://scikit-image.org/docs/0.25.x/api/skimage.data.html#skimage.data.astronaut",
+    "evaluator_sources": [
+      "https://github.com/opencv/opencv/blob/4.12.0/modules/objdetect/src/cascadedetect.cpp",
+      "https://github.com/opencv/opencv/blob/4.12.0/modules/objdetect/src/cascadedetect.hpp"
+    ],
+    "scope": "Fixed windows from a real photograph. Pillow RGB-to-L and bilinear resizing to 24x24 precede the cascade evaluation. The trace covers the OpenCV variance gate and evaluated stages for each window.",
+    "window_size": [
+      24,
+      24
+    ],
+    "stage_count": 25,
+    "weak_classifier_count": 2913,
+    "stage_cutoff_rule": "Reject if sum of selected leaf scores is below the float32 stored stage threshold minus 1e-5, as in OpenCV 4.12.0.",
+    "probes": {
+      "face_crop": {
+        "crop_left_top_right_bottom_exclusive": [
+          176,
+          63,
+          272,
+          159
+        ],
+        "input_pixel_bytes_sha256": "80eea4441bfa1319eff2cdbc0417ff5102711ade8c6a886776f959d0d09c0db3",
+        "normalization": {
+          "window_xywh": [
+            1,
+            1,
+            22,
+            22
+          ],
+          "pixel_sum": 77174,
+          "squared_pixel_sum": 13227980,
+          "population_standard_deviation": 43.65893852411425,
+          "reciprocal_of_area_times_standard_deviation": 4.732400338980369e-05,
+          "area_times_reciprocal": 0.022904817640664987,
+          "area_times_reciprocal_cutoff_strict_upper_bound": 0.1,
+          "passed_variance_gate": true
+        },
+        "stages": [
+          {
+            "stage_index_zero_based": 0,
+            "weak_classifier_count": 9,
+            "score": 2.8628118336200714,
+            "learned_threshold": -5.042550086975098,
+            "opencv_effective_cutoff": -5.04256010055542,
+            "margin": 7.905371934175491,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 1,
+            "weak_classifier_count": 16,
+            "score": 3.337624952197075,
+            "learned_threshold": -4.9842400550842285,
+            "opencv_effective_cutoff": -4.984250068664551,
+            "margin": 8.321875020861626,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 2,
+            "weak_classifier_count": 27,
+            "score": 9.161158829927444,
+            "learned_threshold": -4.6551899909973145,
+            "opencv_effective_cutoff": -4.655200004577637,
+            "margin": 13.816358834505081,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 3,
+            "weak_classifier_count": 32,
+            "score": 4.742632977664471,
+            "learned_threshold": -4.453158855438232,
+            "opencv_effective_cutoff": -4.453168869018555,
+            "margin": 9.195801846683025,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 4,
+            "weak_classifier_count": 52,
+            "score": 3.9404709842056036,
+            "learned_threshold": -4.386458873748779,
+            "opencv_effective_cutoff": -4.386468887329102,
+            "margin": 8.326939871534705,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 5,
+            "weak_classifier_count": 53,
+            "score": 12.611204023240134,
+            "learned_threshold": -4.129930019378662,
+            "opencv_effective_cutoff": -4.129940032958984,
+            "margin": 16.74114405619912,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 6,
+            "weak_classifier_count": 62,
+            "score": 5.731916977092624,
+            "learned_threshold": -4.021809101104736,
+            "opencv_effective_cutoff": -4.021819114685059,
+            "margin": 9.753736091777682,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 7,
+            "weak_classifier_count": 72,
+            "score": 4.015433080494404,
+            "learned_threshold": -3.883208990097046,
+            "opencv_effective_cutoff": -3.883219003677368,
+            "margin": 7.898652084171772,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 8,
+            "weak_classifier_count": 83,
+            "score": 2.248417983268155,
+            "learned_threshold": -3.8424909114837646,
+            "opencv_effective_cutoff": -3.842500925064087,
+            "margin": 6.090918908332242,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 9,
+            "weak_classifier_count": 91,
+            "score": 4.010468069696799,
+            "learned_threshold": -3.6478610038757324,
+            "opencv_effective_cutoff": -3.6478710174560547,
+            "margin": 7.658339087152854,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 10,
+            "weak_classifier_count": 99,
+            "score": 0.9337939801043831,
+            "learned_threshold": -3.870048999786377,
+            "opencv_effective_cutoff": -3.870059013366699,
+            "margin": 4.803852993471082,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 11,
+            "weak_classifier_count": 115,
+            "score": 4.078467955172528,
+            "learned_threshold": -3.7160909175872803,
+            "opencv_effective_cutoff": -3.7161009311676025,
+            "margin": 7.79456888634013,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 12,
+            "weak_classifier_count": 127,
+            "score": 3.691109099367168,
+            "learned_threshold": -3.5645289421081543,
+            "opencv_effective_cutoff": -3.5645389556884766,
+            "margin": 7.255648055055644,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 13,
+            "weak_classifier_count": 135,
+            "score": 3.2293917557690293,
+            "learned_threshold": -3.702599048614502,
+            "opencv_effective_cutoff": -3.702609062194824,
+            "margin": 6.9320008179638535,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 14,
+            "weak_classifier_count": 136,
+            "score": 0.7960329267662019,
+            "learned_threshold": -3.4265899658203125,
+            "opencv_effective_cutoff": -3.4265999794006348,
+            "margin": 4.222632906166837,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 15,
+            "weak_classifier_count": 137,
+            "score": 3.1636560708866455,
+            "learned_threshold": -3.5125269889831543,
+            "opencv_effective_cutoff": -3.5125370025634766,
+            "margin": 6.676193073450122,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 16,
+            "weak_classifier_count": 159,
+            "score": 3.437331861583516,
+            "learned_threshold": -3.593964099884033,
+            "opencv_effective_cutoff": -3.5939741134643555,
+            "margin": 7.0313059750478715,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 17,
+            "weak_classifier_count": 155,
+            "score": -0.727828023096663,
+            "learned_threshold": -3.3933560848236084,
+            "opencv_effective_cutoff": -3.3933660984039307,
+            "margin": 2.6655380753072677,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 18,
+            "weak_classifier_count": 169,
+            "score": 0.44625293277204037,
+            "learned_threshold": -3.2396929264068604,
+            "opencv_effective_cutoff": -3.2397029399871826,
+            "margin": 3.685955872759223,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 19,
+            "weak_classifier_count": 196,
+            "score": 1.7561069284856785,
+            "learned_threshold": -3.2103500366210938,
+            "opencv_effective_cutoff": -3.210360050201416,
+            "margin": 4.9664669786870945,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 20,
+            "weak_classifier_count": 197,
+            "score": 4.966057007753989,
+            "learned_threshold": -3.2772979736328125,
+            "opencv_effective_cutoff": -3.2773079872131348,
+            "margin": 8.243364994967123,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 21,
+            "weak_classifier_count": 181,
+            "score": 5.130728036205255,
+            "learned_threshold": -3.31964111328125,
+            "opencv_effective_cutoff": -3.3196511268615723,
+            "margin": 8.450379163066827,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 22,
+            "weak_classifier_count": 199,
+            "score": 0.32202173344558105,
+            "learned_threshold": -3.2573320865631104,
+            "opencv_effective_cutoff": -3.2573421001434326,
+            "margin": 3.5793638335890137,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 23,
+            "weak_classifier_count": 211,
+            "score": 2.4154258529888466,
+            "learned_threshold": -3.370300054550171,
+            "opencv_effective_cutoff": -3.370310068130493,
+            "margin": 5.78573592111934,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 24,
+            "weak_classifier_count": 200,
+            "score": -0.9719810060341842,
+            "learned_threshold": -2.992827892303467,
+            "opencv_effective_cutoff": -2.992837905883789,
+            "margin": 2.020856899849605,
+            "passed": true
+          }
+        ],
+        "first_stage_stumps": [
+          {
+            "feature_index_zero_based": 0,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  6,
+                  4,
+                  12,
+                  9
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 19122,
+                "weighted_pixel_sum": -19122.0
+              },
+              {
+                "rectangle_xywh": [
+                  6,
+                  7,
+                  12,
+                  3
+                ],
+                "checkpoint_rectangle_weight": 3.0,
+                "pixel_sum": 6154,
+                "weighted_pixel_sum": 18462.0
+              }
+            ],
+            "weighted_pixel_sum": -660.0,
+            "normalized_response": -0.03123384155333042,
+            "learned_threshold": -0.031511999666690826,
+            "learned_leaf_values": [
+              2.087538003921509,
+              -2.217210054397583
+            ],
+            "selected_leaf": "right",
+            "selected_leaf_score": -2.217210054397583
+          },
+          {
+            "feature_index_zero_based": 1,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  6,
+                  4,
+                  12,
+                  7
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 14583,
+                "weighted_pixel_sum": -14583.0
+              },
+              {
+                "rectangle_xywh": [
+                  10,
+                  4,
+                  4,
+                  7
+                ],
+                "checkpoint_rectangle_weight": 3.0,
+                "pixel_sum": 5559,
+                "weighted_pixel_sum": 16677.0
+              }
+            ],
+            "weighted_pixel_sum": 2094.0,
+            "normalized_response": 0.09909646213054657,
+            "learned_threshold": 0.012396000325679779,
+            "learned_leaf_values": [
+              -1.863394021987915,
+              1.327204942703247
+            ],
+            "selected_leaf": "right",
+            "selected_leaf_score": 1.327204942703247
+          },
+          {
+            "feature_index_zero_based": 2,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  3,
+                  9,
+                  18,
+                  9
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 28530,
+                "weighted_pixel_sum": -28530.0
+              },
+              {
+                "rectangle_xywh": [
+                  3,
+                  12,
+                  18,
+                  3
+                ],
+                "checkpoint_rectangle_weight": 3.0,
+                "pixel_sum": 10532,
+                "weighted_pixel_sum": 31596.0
+              }
+            ],
+            "weighted_pixel_sum": 3066.0,
+            "normalized_response": 0.14509539306163788,
+            "learned_threshold": 0.021927999332547188,
+            "learned_leaf_values": [
+              -1.5105249881744385,
+              1.062572956085205
+            ],
+            "selected_leaf": "right",
+            "selected_leaf_score": 1.062572956085205
+          },
+          {
+            "feature_index_zero_based": 3,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  8,
+                  18,
+                  9,
+                  6
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 9551,
+                "weighted_pixel_sum": -9551.0
+              },
+              {
+                "rectangle_xywh": [
+                  8,
+                  20,
+                  9,
+                  2
+                ],
+                "checkpoint_rectangle_weight": 3.0,
+                "pixel_sum": 3268,
+                "weighted_pixel_sum": 9804.0
+              }
+            ],
+            "weighted_pixel_sum": 253.0,
+            "normalized_response": 0.011972973123192787,
+            "learned_threshold": 0.005752999801188707,
+            "learned_leaf_values": [
+              -0.8746389746665955,
+              1.1760339736938477
+            ],
+            "selected_leaf": "right",
+            "selected_leaf_score": 1.1760339736938477
+          },
+          {
+            "feature_index_zero_based": 4,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  3,
+                  5,
+                  4,
+                  19
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 14429,
+                "weighted_pixel_sum": -14429.0
+              },
+              {
+                "rectangle_xywh": [
+                  5,
+                  5,
+                  2,
+                  19
+                ],
+                "checkpoint_rectangle_weight": 2.0,
+                "pixel_sum": 7204,
+                "weighted_pixel_sum": 14408.0
+              }
+            ],
+            "weighted_pixel_sum": -21.0,
+            "normalized_response": -0.0009938040748238564,
+            "learned_threshold": 0.015014000236988068,
+            "learned_leaf_values": [
+              -0.7794569730758667,
+              1.260841965675354
+            ],
+            "selected_leaf": "left",
+            "selected_leaf_score": -0.7794569730758667
+          },
+          {
+            "feature_index_zero_based": 5,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  6,
+                  5,
+                  12,
+                  16
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 34246,
+                "weighted_pixel_sum": -34246.0
+              },
+              {
+                "rectangle_xywh": [
+                  6,
+                  13,
+                  12,
+                  8
+                ],
+                "checkpoint_rectangle_weight": 2.0,
+                "pixel_sum": 16768,
+                "weighted_pixel_sum": 33536.0
+              }
+            ],
+            "weighted_pixel_sum": -710.0,
+            "normalized_response": -0.03360004350543022,
+            "learned_threshold": 0.09937100112438202,
+            "learned_leaf_values": [
+              0.5575129985809326,
+              -1.8743000030517578
+            ],
+            "selected_leaf": "left",
+            "selected_leaf_score": 0.5575129985809326
+          },
+          {
+            "feature_index_zero_based": 6,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  5,
+                  8,
+                  12,
+                  6
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 12768,
+                "weighted_pixel_sum": -12768.0
+              },
+              {
+                "rectangle_xywh": [
+                  5,
+                  11,
+                  12,
+                  3
+                ],
+                "checkpoint_rectangle_weight": 2.0,
+                "pixel_sum": 6926,
+                "weighted_pixel_sum": 13852.0
+              }
+            ],
+            "weighted_pixel_sum": 1084.0,
+            "normalized_response": 0.05129921808838844,
+            "learned_threshold": 0.0027340000960975885,
+            "learned_leaf_values": [
+              -1.6911929845809937,
+              0.44009700417518616
+            ],
+            "selected_leaf": "right",
+            "selected_leaf_score": 0.44009700417518616
+          },
+          {
+            "feature_index_zero_based": 7,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  11,
+                  14,
+                  4,
+                  10
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 6889,
+                "weighted_pixel_sum": -6889.0
+              },
+              {
+                "rectangle_xywh": [
+                  11,
+                  19,
+                  4,
+                  5
+                ],
+                "checkpoint_rectangle_weight": 2.0,
+                "pixel_sum": 3579,
+                "weighted_pixel_sum": 7158.0
+              }
+            ],
+            "weighted_pixel_sum": 269.0,
+            "normalized_response": 0.012730157002806664,
+            "learned_threshold": -0.018859000876545906,
+            "learned_leaf_values": [
+              -1.4769539833068848,
+              0.44350099563598633
+            ],
+            "selected_leaf": "right",
+            "selected_leaf_score": 0.44350099563598633
+          },
+          {
+            "feature_index_zero_based": 8,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  4,
+                  0,
+                  7,
+                  6
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 5800,
+                "weighted_pixel_sum": -5800.0
+              },
+              {
+                "rectangle_xywh": [
+                  4,
+                  3,
+                  7,
+                  3
+                ],
+                "checkpoint_rectangle_weight": 2.0,
+                "pixel_sum": 3450,
+                "weighted_pixel_sum": 6900.0
+              }
+            ],
+            "weighted_pixel_sum": 1100.0,
+            "normalized_response": 0.05205640196800232,
+            "learned_threshold": 0.0059739998541772366,
+            "learned_leaf_values": [
+              -0.8590919971466064,
+              0.8525559902191162
+            ],
+            "selected_leaf": "right",
+            "selected_leaf_score": 0.8525559902191162
+          }
+        ],
+        "window_accepted": true
+      },
+      "background_crop": {
+        "crop_left_top_right_bottom_exclusive": [
+          32,
+          32,
+          128,
+          128
+        ],
+        "input_pixel_bytes_sha256": "96db4df1e56b9659f145ccff22961872bc1b548c93e2b44d8ffb3ab13ba1fe7a",
+        "normalization": {
+          "window_xywh": [
+            1,
+            1,
+            22,
+            22
+          ],
+          "pixel_sum": 70143,
+          "squared_pixel_sum": 11836179,
+          "population_standard_deviation": 58.75439444594697,
+          "reciprocal_of_area_times_standard_deviation": 3.516529613989405e-05,
+          "area_times_reciprocal": 0.017020003331708722,
+          "area_times_reciprocal_cutoff_strict_upper_bound": 0.1,
+          "passed_variance_gate": true
+        },
+        "stages": [
+          {
+            "stage_index_zero_based": 0,
+            "weak_classifier_count": 9,
+            "score": -3.563598096370697,
+            "learned_threshold": -5.042550086975098,
+            "opencv_effective_cutoff": -5.04256010055542,
+            "margin": 1.478962004184723,
+            "passed": true
+          },
+          {
+            "stage_index_zero_based": 1,
+            "weak_classifier_count": 16,
+            "score": -9.409497126936913,
+            "learned_threshold": -4.9842400550842285,
+            "opencv_effective_cutoff": -4.984250068664551,
+            "margin": -4.425247058272362,
+            "passed": false
+          }
+        ],
+        "first_stage_stumps": [
+          {
+            "feature_index_zero_based": 0,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  6,
+                  4,
+                  12,
+                  9
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 17614,
+                "weighted_pixel_sum": -17614.0
+              },
+              {
+                "rectangle_xywh": [
+                  6,
+                  7,
+                  12,
+                  3
+                ],
+                "checkpoint_rectangle_weight": 3.0,
+                "pixel_sum": 5877,
+                "weighted_pixel_sum": 17631.0
+              }
+            ],
+            "weighted_pixel_sum": 17.0,
+            "normalized_response": 0.0005978100234642625,
+            "learned_threshold": -0.031511999666690826,
+            "learned_leaf_values": [
+              2.087538003921509,
+              -2.217210054397583
+            ],
+            "selected_leaf": "right",
+            "selected_leaf_score": -2.217210054397583
+          },
+          {
+            "feature_index_zero_based": 1,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  6,
+                  4,
+                  12,
+                  7
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 13979,
+                "weighted_pixel_sum": -13979.0
+              },
+              {
+                "rectangle_xywh": [
+                  10,
+                  4,
+                  4,
+                  7
+                ],
+                "checkpoint_rectangle_weight": 3.0,
+                "pixel_sum": 4916,
+                "weighted_pixel_sum": 14748.0
+              }
+            ],
+            "weighted_pixel_sum": 769.0,
+            "normalized_response": 0.02704211324453354,
+            "learned_threshold": 0.012396000325679779,
+            "learned_leaf_values": [
+              -1.863394021987915,
+              1.327204942703247
+            ],
+            "selected_leaf": "right",
+            "selected_leaf_score": 1.327204942703247
+          },
+          {
+            "feature_index_zero_based": 2,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  3,
+                  9,
+                  18,
+                  9
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 22734,
+                "weighted_pixel_sum": -22734.0
+              },
+              {
+                "rectangle_xywh": [
+                  3,
+                  12,
+                  18,
+                  3
+                ],
+                "checkpoint_rectangle_weight": 3.0,
+                "pixel_sum": 7127,
+                "weighted_pixel_sum": 21381.0
+              }
+            ],
+            "weighted_pixel_sum": -1353.0,
+            "normalized_response": -0.04757864400744438,
+            "learned_threshold": 0.021927999332547188,
+            "learned_leaf_values": [
+              -1.5105249881744385,
+              1.062572956085205
+            ],
+            "selected_leaf": "left",
+            "selected_leaf_score": -1.5105249881744385
+          },
+          {
+            "feature_index_zero_based": 3,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  8,
+                  18,
+                  9,
+                  6
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 9466,
+                "weighted_pixel_sum": -9466.0
+              },
+              {
+                "rectangle_xywh": [
+                  8,
+                  20,
+                  9,
+                  2
+                ],
+                "checkpoint_rectangle_weight": 3.0,
+                "pixel_sum": 3157,
+                "weighted_pixel_sum": 9471.0
+              }
+            ],
+            "weighted_pixel_sum": 5.0,
+            "normalized_response": 0.00017582648433744907,
+            "learned_threshold": 0.005752999801188707,
+            "learned_leaf_values": [
+              -0.8746389746665955,
+              1.1760339736938477
+            ],
+            "selected_leaf": "left",
+            "selected_leaf_score": -0.8746389746665955
+          },
+          {
+            "feature_index_zero_based": 4,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  3,
+                  5,
+                  4,
+                  19
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 5898,
+                "weighted_pixel_sum": -5898.0
+              },
+              {
+                "rectangle_xywh": [
+                  5,
+                  5,
+                  2,
+                  19
+                ],
+                "checkpoint_rectangle_weight": 2.0,
+                "pixel_sum": 3456,
+                "weighted_pixel_sum": 6912.0
+              }
+            ],
+            "weighted_pixel_sum": 1014.0,
+            "normalized_response": 0.0356576107442379,
+            "learned_threshold": 0.015014000236988068,
+            "learned_leaf_values": [
+              -0.7794569730758667,
+              1.260841965675354
+            ],
+            "selected_leaf": "right",
+            "selected_leaf_score": 1.260841965675354
+          },
+          {
+            "feature_index_zero_based": 5,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  6,
+                  5,
+                  12,
+                  16
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 31391,
+                "weighted_pixel_sum": -31391.0
+              },
+              {
+                "rectangle_xywh": [
+                  6,
+                  13,
+                  12,
+                  8
+                ],
+                "checkpoint_rectangle_weight": 2.0,
+                "pixel_sum": 15880,
+                "weighted_pixel_sum": 31760.0
+              }
+            ],
+            "weighted_pixel_sum": 369.0,
+            "normalized_response": 0.012975994497537613,
+            "learned_threshold": 0.09937100112438202,
+            "learned_leaf_values": [
+              0.5575129985809326,
+              -1.8743000030517578
+            ],
+            "selected_leaf": "left",
+            "selected_leaf_score": 0.5575129985809326
+          },
+          {
+            "feature_index_zero_based": 6,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  5,
+                  8,
+                  12,
+                  6
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 10243,
+                "weighted_pixel_sum": -10243.0
+              },
+              {
+                "rectangle_xywh": [
+                  5,
+                  11,
+                  12,
+                  3
+                ],
+                "checkpoint_rectangle_weight": 2.0,
+                "pixel_sum": 4949,
+                "weighted_pixel_sum": 9898.0
+              }
+            ],
+            "weighted_pixel_sum": -345.0,
+            "normalized_response": -0.012132027186453342,
+            "learned_threshold": 0.0027340000960975885,
+            "learned_leaf_values": [
+              -1.6911929845809937,
+              0.44009700417518616
+            ],
+            "selected_leaf": "left",
+            "selected_leaf_score": -1.6911929845809937
+          },
+          {
+            "feature_index_zero_based": 7,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  11,
+                  14,
+                  4,
+                  10
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 7044,
+                "weighted_pixel_sum": -7044.0
+              },
+              {
+                "rectangle_xywh": [
+                  11,
+                  19,
+                  4,
+                  5
+                ],
+                "checkpoint_rectangle_weight": 2.0,
+                "pixel_sum": 3559,
+                "weighted_pixel_sum": 7118.0
+              }
+            ],
+            "weighted_pixel_sum": 74.0,
+            "normalized_response": 0.0026022319216281176,
+            "learned_threshold": -0.018859000876545906,
+            "learned_leaf_values": [
+              -1.4769539833068848,
+              0.44350099563598633
+            ],
+            "selected_leaf": "right",
+            "selected_leaf_score": 0.44350099563598633
+          },
+          {
+            "feature_index_zero_based": 8,
+            "rectangles": [
+              {
+                "rectangle_xywh": [
+                  4,
+                  0,
+                  7,
+                  6
+                ],
+                "checkpoint_rectangle_weight": -1.0,
+                "pixel_sum": 6442,
+                "weighted_pixel_sum": -6442.0
+              },
+              {
+                "rectangle_xywh": [
+                  4,
+                  3,
+                  7,
+                  3
+                ],
+                "checkpoint_rectangle_weight": 2.0,
+                "pixel_sum": 3003,
+                "weighted_pixel_sum": 6006.0
+              }
+            ],
+            "weighted_pixel_sum": -436.0,
+            "normalized_response": -0.015332069247961044,
+            "learned_threshold": 0.0059739998541772366,
+            "learned_leaf_values": [
+              -0.8590919971466064,
+              0.8525559902191162
+            ],
+            "selected_leaf": "left",
+            "selected_leaf_score": -0.8590919971466064
+          }
+        ],
+        "window_accepted": false
+      }
+    }
+  },
+  "langid": {
+    "model": "langid.py 1.1.6 pretrained multinomial naive Bayes",
+    "checkpoint": {
+      "path": "weights/langid/langid-1.1.6.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/ea/4c/0fb7d900d3b0b9c8703be316fbddffecdab23c64e1b46c7a83561d78bd43/langid-1.1.6.tar.gz",
+      "sha256": "044bcae1912dab85c33d8e98f2811b8f4ff1213e5e9a9e9510137b84da2cb293",
+      "size_bytes": 1925978
+    },
+    "model_release": "https://pypi.org/project/langid/1.1.6/",
+    "method_sources": [
+      "https://github.com/saffsd/langid.py",
+      "https://aclanthology.org/P12-3005/"
+    ],
+    "scope": "UTF-8 byte counts from the checkpoint's DFA, then log evidence, class priors, and argmax across all 97 classes. The listed probabilities use optional normalization across the full class set.",
+    "class_count": 97,
+    "selected_byte_ngram_count": 7480,
+    "dfa_state_count": 9118,
+    "class_prior_parameterization": "The stored prior term is the natural logarithm of the class document count. The training implementation in langid/train/NBtrain.py leaves the common prior normalizer out of the stored term.",
+    "decision_rule": "Choose the highest stored class prior term plus the sum of active byte-feature counts times learned log likelihoods.",
+    "upstream_english_example_raw_log_score": -54.41310358047485,
+    "upstream_english_example_normalized_probability": 0.9999999909903544,
+    "probes": {
+      "english_upstream_example": {
+        "text": "This is a test",
+        "utf8_hex": "54 68 69 73 20 69 73 20 61 20 74 65 73 74",
+        "active_feature_counts": [
+          [
+            48,
+            2
+          ],
+          [
+            536,
+            1
+          ],
+          [
+            668,
+            1
+          ],
+          [
+            1269,
+            1
+          ],
+          [
+            1281,
+            1
+          ],
+          [
+            2227,
+            1
+          ],
+          [
+            2318,
+            1
+          ],
+          [
+            2339,
+            1
+          ],
+          [
+            2346,
+            1
+          ],
+          [
+            3113,
+            1
+          ]
+        ],
+        "total_feature_hits": 11,
+        "predicted_language": "en",
+        "runner_up": "la",
+        "winner_minus_runner_up_raw_log_score": 18.826539993286133,
+        "candidate_scores": [
+          {
+            "language": "en",
+            "class_index_zero_based": 18,
+            "rank_among_all_languages": 1,
+            "stored_log_class_prior_term": 9.061840057373047,
+            "normalized_class_prior_probability": 0.1694615059586533,
+            "sum_of_count_times_log_likelihood": -63.4749436378479,
+            "raw_log_score": -54.41310358047485,
+            "normalized_probability_across_all_languages": 0.999999990990354
+          },
+          {
+            "language": "la",
+            "class_index_zero_based": 48,
+            "rank_among_all_languages": 2,
+            "stored_log_class_prior_term": 3.0910425186157227,
+            "normalized_class_prior_probability": 0.0004325005239276646,
+            "sum_of_count_times_log_likelihood": -76.33068609237671,
+            "raw_log_score": -73.23964357376099,
+            "normalized_probability_across_all_languages": 6.66403951621167e-09
+          },
+          {
+            "language": "br",
+            "class_index_zero_based": 9,
+            "rank_among_all_languages": 3,
+            "stored_log_class_prior_term": 3.931825637817383,
+            "normalized_class_prior_probability": 0.0010026147906015536,
+            "sum_of_count_times_log_likelihood": -78.24093341827393,
+            "raw_log_score": -74.30910778045654,
+            "normalized_probability_across_all_languages": 2.287047370925898e-09
+          },
+          {
+            "language": "af",
+            "class_index_zero_based": 0,
+            "rank_among_all_languages": 4,
+            "stored_log_class_prior_term": 3.4339871406555176,
+            "normalized_class_prior_probability": 0.0006094324777736903,
+            "sum_of_count_times_log_likelihood": -81.99434328079224,
+            "raw_log_score": -78.56035614013672,
+            "normalized_probability_across_all_languages": 3.258227885792401e-11
+          },
+          {
+            "language": "ga",
+            "class_index_zero_based": 27,
+            "rank_among_all_languages": 5,
+            "stored_log_class_prior_term": 4.158883094787598,
+            "normalized_class_prior_probability": 0.0012581832746076697,
+            "sum_of_count_times_log_likelihood": -83.4588737487793,
+            "raw_log_score": -79.2999906539917,
+            "normalized_probability_across_all_languages": 1.5551141330662787e-11
+          },
+          {
+            "language": "fr",
+            "class_index_zero_based": 26,
+            "rank_among_all_languages": 8,
+            "stored_log_class_prior_term": 8.295048713684082,
+            "normalized_class_prior_probability": 0.07871505662635353,
+            "sum_of_count_times_log_likelihood": -92.1221489906311,
+            "raw_log_score": -83.82710027694702,
+            "normalized_probability_across_all_languages": 1.6813709519166228e-13
+          },
+          {
+            "language": "es",
+            "class_index_zero_based": 20,
+            "rank_among_all_languages": 9,
+            "stored_log_class_prior_term": 8.394347190856934,
+            "normalized_class_prior_probability": 0.08693258480920163,
+            "sum_of_count_times_log_likelihood": -92.87831926345825,
+            "raw_log_score": -84.48397207260132,
+            "normalized_probability_across_all_languages": 8.717415451233114e-14
+          },
+          {
+            "language": "de",
+            "class_index_zero_based": 15,
+            "rank_among_all_languages": 23,
+            "stored_log_class_prior_term": 8.41027545928955,
+            "normalized_class_prior_probability": 0.08832835696239005,
+            "sum_of_count_times_log_likelihood": -99.73172521591187,
+            "raw_log_score": -91.32144975662231,
+            "normalized_probability_across_all_languages": 9.352095125024215e-17
+          }
+        ],
+        "top_features_by_absolute_winner_runner_up_contribution_gap": [
+          {
+            "feature_id_zero_based": 2339,
+            "byte_ngram_hex": "54 68 69 73",
+            "byte_ngram_display": "This",
+            "count": 1,
+            "winner_minus_runner_up_contribution": 2.5004587173461914,
+            "candidate_contributions": {
+              "en": {
+                "learned_log_likelihood": -6.987627029418945,
+                "contribution": -6.987627029418945
+              },
+              "la": {
+                "learned_log_likelihood": -9.488085746765137,
+                "contribution": -9.488085746765137
+              },
+              "br": {
+                "learned_log_likelihood": -9.066621780395508,
+                "contribution": -9.066621780395508
+              },
+              "af": {
+                "learned_log_likelihood": -9.889591217041016,
+                "contribution": -9.889591217041016
+              },
+              "ga": {
+                "learned_log_likelihood": -11.423033714294434,
+                "contribution": -11.423033714294434
+              },
+              "fr": {
+                "learned_log_likelihood": -11.137398719787598,
+                "contribution": -11.137398719787598
+              },
+              "es": {
+                "learned_log_likelihood": -10.490129470825195,
+                "contribution": -10.490129470825195
+              },
+              "de": {
+                "learned_log_likelihood": -11.138737678527832,
+                "contribution": -11.138737678527832
+              }
+            }
+          },
+          {
+            "feature_id_zero_based": 2346,
+            "byte_ngram_hex": "54 68 69",
+            "byte_ngram_display": "Thi",
+            "count": 1,
+            "winner_minus_runner_up_contribution": 2.193803310394287,
+            "candidate_contributions": {
+              "en": {
+                "learned_log_likelihood": -6.888817310333252,
+                "contribution": -6.888817310333252
+              },
+              "la": {
+                "learned_log_likelihood": -9.082620620727539,
+                "contribution": -9.082620620727539
+              },
+              "br": {
+                "learned_log_likelihood": -9.066621780395508,
+                "contribution": -9.066621780395508
+              },
+              "af": {
+                "learned_log_likelihood": -9.889591217041016,
+                "contribution": -9.889591217041016
+              },
+              "ga": {
+                "learned_log_likelihood": -11.423033714294434,
+                "contribution": -11.423033714294434
+              },
+              "fr": {
+                "learned_log_likelihood": -10.386571884155273,
+                "contribution": -10.386571884155273
+              },
+              "es": {
+                "learned_log_likelihood": -10.274582862854004,
+                "contribution": -10.274582862854004
+              },
+              "de": {
+                "learned_log_likelihood": -10.44559097290039,
+                "contribution": -10.44559097290039
+              }
+            }
+          },
+          {
+            "feature_id_zero_based": 2318,
+            "byte_ngram_hex": "20 69 73 20",
+            "byte_ngram_display": " is ",
+            "count": 1,
+            "winner_minus_runner_up_contribution": 1.588301658630371,
+            "candidate_contributions": {
+              "en": {
+                "learned_log_likelihood": -5.501888751983643,
+                "contribution": -5.501888751983643
+              },
+              "la": {
+                "learned_log_likelihood": -7.090190410614014,
+                "contribution": -7.090190410614014
+              },
+              "br": {
+                "learned_log_likelihood": -6.862476348876953,
+                "contribution": -6.862476348876953
+              },
+              "af": {
+                "learned_log_likelihood": -5.284421443939209,
+                "contribution": -5.284421443939209
+              },
+              "ga": {
+                "learned_log_likelihood": -7.0285844802856445,
+                "contribution": -7.0285844802856445
+              },
+              "fr": {
+                "learned_log_likelihood": -10.148786544799805,
+                "contribution": -10.148786544799805
+              },
+              "es": {
+                "learned_log_likelihood": -9.766374588012695,
+                "contribution": -9.766374588012695
+              },
+              "de": {
+                "learned_log_likelihood": -10.096948623657227,
+                "contribution": -10.096948623657227
+              }
+            }
+          },
+          {
+            "feature_id_zero_based": 536,
+            "byte_ngram_hex": "68 69 73 20",
+            "byte_ngram_display": "his ",
+            "count": 1,
+            "winner_minus_runner_up_contribution": 1.448814868927002,
+            "candidate_contributions": {
+              "en": {
+                "learned_log_likelihood": -5.687895774841309,
+                "contribution": -5.687895774841309
+              },
+              "la": {
+                "learned_log_likelihood": -7.1367106437683105,
+                "contribution": -7.1367106437683105
+              },
+              "br": {
+                "learned_log_likelihood": -7.018928527832031,
+                "contribution": -7.018928527832031
+              },
+              "af": {
+                "learned_log_likelihood": -9.196444511413574,
+                "contribution": -9.196444511413574
+              },
+              "ga": {
+                "learned_log_likelihood": -11.423033714294434,
+                "contribution": -11.423033714294434
+              },
+              "fr": {
+                "learned_log_likelihood": -10.110013961791992,
+                "contribution": -10.110013961791992
+              },
+              "es": {
+                "learned_log_likelihood": -9.44044303894043,
+                "contribution": -9.44044303894043
+              },
+              "de": {
+                "learned_log_likelihood": -10.051620483398438,
+                "contribution": -10.051620483398438
+              }
+            }
+          },
+          {
+            "feature_id_zero_based": 1269,
+            "byte_ngram_hex": "20 69 73",
+            "byte_ngram_display": " is",
+            "count": 1,
+            "winner_minus_runner_up_contribution": 1.3100709915161133,
+            "candidate_contributions": {
+              "en": {
+                "learned_log_likelihood": -5.405426025390625,
+                "contribution": -5.405426025390625
+              },
+              "la": {
+                "learned_log_likelihood": -6.715497016906738,
+                "contribution": -6.715497016906738
+              },
+              "br": {
+                "learned_log_likelihood": -6.64625358581543,
+                "contribution": -6.64625358581543
+              },
+              "af": {
+                "learned_log_likelihood": -5.180061340332031,
+                "contribution": -5.180061340332031
+              },
+              "ga": {
+                "learned_log_likelihood": -6.594719886779785,
+                "contribution": -6.594719886779785
+              },
+              "fr": {
+                "learned_log_likelihood": -9.02642822265625,
+                "contribution": -9.02642822265625
+              },
+              "es": {
+                "learned_log_likelihood": -9.034031867980957,
+                "contribution": -9.034031867980957
+              },
+              "de": {
+                "learned_log_likelihood": -6.435145854949951,
+                "contribution": -6.435145854949951
+              }
+            }
+          },
+          {
+            "feature_id_zero_based": 668,
+            "byte_ngram_hex": "20 61 20",
+            "byte_ngram_display": " a ",
+            "count": 1,
+            "winner_minus_runner_up_contribution": 1.1961164474487305,
+            "candidate_contributions": {
+              "en": {
+                "learned_log_likelihood": -4.9961323738098145,
+                "contribution": -4.9961323738098145
+              },
+              "la": {
+                "learned_log_likelihood": -6.192248821258545,
+                "contribution": -6.192248821258545
+              },
+              "br": {
+                "learned_log_likelihood": -5.1684441566467285,
+                "contribution": -5.1684441566467285
+              },
+              "af": {
+                "learned_log_likelihood": -7.05637788772583,
+                "contribution": -7.05637788772583
+              },
+              "ga": {
+                "learned_log_likelihood": -4.903886318206787,
+                "contribution": -4.903886318206787
+              },
+              "fr": {
+                "learned_log_likelihood": -6.460489273071289,
+                "contribution": -6.460489273071289
+              },
+              "es": {
+                "learned_log_likelihood": -5.386726379394531,
+                "contribution": -5.386726379394531
+              },
+              "de": {
+                "learned_log_likelihood": -9.594220161437988,
+                "contribution": -9.594220161437988
+              }
+            }
+          },
+          {
+            "feature_id_zero_based": 2227,
+            "byte_ngram_hex": "73 20 61 20",
+            "byte_ngram_display": "s a ",
+            "count": 1,
+            "winner_minus_runner_up_contribution": 1.1369833946228027,
+            "candidate_contributions": {
+              "en": {
+                "learned_log_likelihood": -6.6463541984558105,
+                "contribution": -6.6463541984558105
+              },
+              "la": {
+                "learned_log_likelihood": -7.783337593078613,
+                "contribution": -7.783337593078613
+              },
+              "br": {
+                "learned_log_likelihood": -8.150330543518066,
+                "contribution": -8.150330543518066
+              },
+              "af": {
+                "learned_log_likelihood": -9.889591217041016,
+                "contribution": -9.889591217041016
+              },
+              "ga": {
+                "learned_log_likelihood": -7.248646259307861,
+                "contribution": -7.248646259307861
+              },
+              "fr": {
+                "learned_log_likelihood": -8.851197242736816,
+                "contribution": -8.851197242736816
+              },
+              "es": {
+                "learned_log_likelihood": -7.239127159118652,
+                "contribution": -7.239127159118652
+              },
+              "de": {
+                "learned_log_likelihood": -11.52440071105957,
+                "contribution": -11.52440071105957
+              }
+            }
+          },
+          {
+            "feature_id_zero_based": 1281,
+            "byte_ngram_hex": "73 20 61",
+            "byte_ngram_display": "s a",
+            "count": 1,
+            "winner_minus_runner_up_contribution": 0.8850245475769043,
+            "candidate_contributions": {
+              "en": {
+                "learned_log_likelihood": -4.978720188140869,
+                "contribution": -4.978720188140869
+              },
+              "la": {
+                "learned_log_likelihood": -5.863744735717773,
+                "contribution": -5.863744735717773
+              },
+              "br": {
+                "learned_log_likelihood": -6.04925012588501,
+                "contribution": -6.04925012588501
+              },
+              "af": {
+                "learned_log_likelihood": -6.798549175262451,
+                "contribution": -6.798549175262451
+              },
+              "ga": {
+                "learned_log_likelihood": -5.565100193023682,
+                "contribution": -5.565100193023682
+              },
+              "fr": {
+                "learned_log_likelihood": -5.64046049118042,
+                "contribution": -5.64046049118042
+              },
+              "es": {
+                "learned_log_likelihood": -5.898510456085205,
+                "contribution": -5.898510456085205
+              },
+              "de": {
+                "learned_log_likelihood": -7.128603935241699,
+                "contribution": -7.128603935241699
+              }
+            }
+          }
+        ]
+      },
+      "french_utf8_example": {
+        "text": "C'est déjà l'été à Montréal.",
+        "utf8_hex": "43 27 65 73 74 20 64 c3 a9 6a c3 a0 20 6c 27 c3 a9 74 c3 a9 20 c3 a0 20 4d 6f 6e 74 72 c3 a9 61 6c 2e",
+        "active_feature_counts": [
+          [
+            4,
+            1
+          ],
+          [
+            107,
+            1
+          ],
+          [
+            204,
+            2
+          ],
+          [
+            345,
+            2
+          ],
+          [
+            493,
+            1
+          ],
+          [
+            567,
+            4
+          ],
+          [
+            614,
+            2
+          ],
+          [
+            791,
+            1
+          ],
+          [
+            1005,
+            1
+          ],
+          [
+            1137,
+            1
+          ],
+          [
+            1336,
+            1
+          ],
+          [
+            1372,
+            1
+          ],
+          [
+            1642,
+            1
+          ],
+          [
+            1692,
+            1
+          ],
+          [
+            1737,
+            1
+          ],
+          [
+            1893,
+            1
+          ],
+          [
+            1956,
+            1
+          ],
+          [
+            1962,
+            1
+          ],
+          [
+            1963,
+            1
+          ],
+          [
+            1990,
+            1
+          ],
+          [
+            2002,
+            1
+          ],
+          [
+            2058,
+            1
+          ],
+          [
+            2073,
+            1
+          ],
+          [
+            2937,
+            1
+          ],
+          [
+            2958,
+            1
+          ]
+        ],
+        "total_feature_hits": 31,
+        "predicted_language": "fr",
+        "runner_up": "lb",
+        "winner_minus_runner_up_raw_log_score": 71.07409429550171,
+        "candidate_scores": [
+          {
+            "language": "fr",
+            "class_index_zero_based": 26,
+            "rank_among_all_languages": 1,
+            "stored_log_class_prior_term": 8.295048713684082,
+            "normalized_class_prior_probability": 0.07871505662635353,
+            "sum_of_count_times_log_likelihood": -170.99351739883423,
+            "raw_log_score": -162.69846868515015,
+            "normalized_probability_across_all_languages": 1.0
+          },
+          {
+            "language": "lb",
+            "class_index_zero_based": 49,
+            "rank_among_all_languages": 2,
+            "stored_log_class_prior_term": 2.7725887298583984,
+            "normalized_class_prior_probability": 0.00031454581745371535,
+            "sum_of_count_times_log_likelihood": -236.54515171051025,
+            "raw_log_score": -233.77256298065186,
+            "normalized_probability_across_all_languages": 1.3580414986386995e-31
+          },
+          {
+            "language": "jv",
+            "class_index_zero_based": 40,
+            "rank_among_all_languages": 3,
+            "stored_log_class_prior_term": 2.7725887298583984,
+            "normalized_class_prior_probability": 0.00031454581745371535,
+            "sum_of_count_times_log_likelihood": -249.03567743301392,
+            "raw_log_score": -246.26308870315552,
+            "normalized_probability_across_all_languages": 5.10912635952527e-37
+          },
+          {
+            "language": "oc",
+            "class_index_zero_based": 65,
+            "rank_among_all_languages": 4,
+            "stored_log_class_prior_term": 4.18965482711792,
+            "normalized_class_prior_probability": 0.0012975015975177535,
+            "sum_of_count_times_log_likelihood": -254.14080333709717,
+            "raw_log_score": -249.95114850997925,
+            "normalized_probability_across_all_languages": 1.2783289394452737e-38
+          },
+          {
+            "language": "br",
+            "class_index_zero_based": 9,
+            "rank_among_all_languages": 5,
+            "stored_log_class_prior_term": 3.931825637817383,
+            "normalized_class_prior_probability": 0.0010026147906015536,
+            "sum_of_count_times_log_likelihood": -257.87682342529297,
+            "raw_log_score": -253.9449977874756,
+            "normalized_probability_across_all_languages": 2.3557864421599235e-40
+          },
+          {
+            "language": "es",
+            "class_index_zero_based": 20,
+            "rank_among_all_languages": 24,
+            "stored_log_class_prior_term": 8.394347190856934,
+            "normalized_class_prior_probability": 0.08693258480920163,
+            "sum_of_count_times_log_likelihood": -298.841055393219,
+            "raw_log_score": -290.44670820236206,
+            "normalized_probability_across_all_languages": 3.308601823912129e-56
+          },
+          {
+            "language": "en",
+            "class_index_zero_based": 18,
+            "rank_among_all_languages": 47,
+            "stored_log_class_prior_term": 9.061840057373047,
+            "normalized_class_prior_probability": 0.1694615059586533,
+            "sum_of_count_times_log_likelihood": -335.27446460723877,
+            "raw_log_score": -326.2126245498657,
+            "normalized_probability_across_all_languages": 9.698496086457257e-72
+          },
+          {
+            "language": "de",
+            "class_index_zero_based": 15,
+            "rank_among_all_languages": 64,
+            "stored_log_class_prior_term": 8.41027545928955,
+            "normalized_class_prior_probability": 0.08832835696239005,
+            "sum_of_count_times_log_likelihood": -359.508994102478,
+            "raw_log_score": -351.0987186431885,
+            "normalized_probability_across_all_languages": 1.509423315285333e-82
+          }
+        ],
+        "top_features_by_absolute_winner_runner_up_contribution_gap": [
+          {
+            "feature_id_zero_based": 204,
+            "byte_ngram_hex": "a0 20",
+            "byte_ngram_display": "\\xa0 ",
+            "count": 2,
+            "winner_minus_runner_up_contribution": 6.432781219482422,
+            "candidate_contributions": {
+              "fr": {
+                "learned_log_likelihood": -5.253658294677734,
+                "contribution": -10.507316589355469
+              },
+              "lb": {
+                "learned_log_likelihood": -8.470048904418945,
+                "contribution": -16.94009780883789
+              },
+              "jv": {
+                "learned_log_likelihood": -10.545578002929688,
+                "contribution": -21.091156005859375
+              },
+              "oc": {
+                "learned_log_likelihood": -7.969472885131836,
+                "contribution": -15.938945770263672
+              },
+              "br": {
+                "learned_log_likelihood": -8.471914291381836,
+                "contribution": -16.943828582763672
+              },
+              "es": {
+                "learned_log_likelihood": -10.5428466796875,
+                "contribution": -21.085693359375
+              },
+              "en": {
+                "learned_log_likelihood": -9.35277271270752,
+                "contribution": -18.70554542541504
+              },
+              "de": {
+                "learned_log_likelihood": -10.637097358703613,
+                "contribution": -21.274194717407227
+              }
+            }
+          },
+          {
+            "feature_id_zero_based": 614,
+            "byte_ngram_hex": "c3 a0 20",
+            "byte_ngram_display": "à ",
+            "count": 2,
+            "winner_minus_runner_up_contribution": 6.428635597229004,
+            "candidate_contributions": {
+              "fr": {
+                "learned_log_likelihood": -5.255731105804443,
+                "contribution": -10.511462211608887
+              },
+              "lb": {
+                "learned_log_likelihood": -8.470048904418945,
+                "contribution": -16.94009780883789
+              },
+              "jv": {
+                "learned_log_likelihood": -10.545578002929688,
+                "contribution": -21.091156005859375
+              },
+              "oc": {
+                "learned_log_likelihood": -7.969472885131836,
+                "contribution": -15.938945770263672
+              },
+              "br": {
+                "learned_log_likelihood": -8.471914291381836,
+                "contribution": -16.943828582763672
+              },
+              "es": {
+                "learned_log_likelihood": -11.01456069946289,
+                "contribution": -22.02912139892578
+              },
+              "en": {
+                "learned_log_likelihood": -11.189688682556152,
+                "contribution": -22.379377365112305
+              },
+              "de": {
+                "learned_log_likelihood": -12.333231925964355,
+                "contribution": -24.66646385192871
+              }
+            }
+          },
+          {
+            "feature_id_zero_based": 345,
+            "byte_ngram_hex": "c3 a0",
+            "byte_ngram_display": "à",
+            "count": 2,
+            "winner_minus_runner_up_contribution": 5.656253814697266,
+            "candidate_contributions": {
+              "fr": {
+                "learned_log_likelihood": -5.236456871032715,
+                "contribution": -10.47291374206543
+              },
+              "lb": {
+                "learned_log_likelihood": -8.064583778381348,
+                "contribution": -16.129167556762695
+              },
+              "jv": {
+                "learned_log_likelihood": -8.75381851196289,
+                "contribution": -17.50763702392578
+              },
+              "oc": {
+                "learned_log_likelihood": -6.536658763885498,
+                "contribution": -13.073317527770996
+              },
+              "br": {
+                "learned_log_likelihood": -8.438013076782227,
+                "contribution": -16.876026153564453
+              },
+              "es": {
+                "learned_log_likelihood": -10.74415111541748,
+                "contribution": -21.48830223083496
+              },
+              "en": {
+                "learned_log_likelihood": -9.847420692443848,
+                "contribution": -19.694841384887695
+              },
+              "de": {
+                "learned_log_likelihood": -12.084016799926758,
+                "contribution": -24.168033599853516
+              }
+            }
+          },
+          {
+            "feature_id_zero_based": 567,
+            "byte_ngram_hex": "a9",
+            "byte_ngram_display": "\\xa9",
+            "count": 4,
+            "winner_minus_runner_up_contribution": 4.156505584716797,
+            "candidate_contributions": {
+              "fr": {
+                "learned_log_likelihood": -3.366178512573242,
+                "contribution": -13.464714050292969
+              },
+              "lb": {
+                "learned_log_likelihood": -4.405304908752441,
+                "contribution": -17.621219635009766
+              },
+              "jv": {
+                "learned_log_likelihood": -3.883723497390747,
+                "contribution": -15.534893989562988
+              },
+              "oc": {
+                "learned_log_likelihood": -5.105912685394287,
+                "contribution": -20.42365074157715
+              },
+              "br": {
+                "learned_log_likelihood": -5.909621238708496,
+                "contribution": -23.638484954833984
+              },
+              "es": {
+                "learned_log_likelihood": -5.984809875488281,
+                "contribution": -23.939239501953125
+              },
+              "en": {
+                "learned_log_likelihood": -8.409173011779785,
+                "contribution": -33.63669204711914
+              },
+              "de": {
+                "learned_log_likelihood": -8.982336044311523,
+                "contribution": -35.929344177246094
+              }
+            }
+          },
+          {
+            "feature_id_zero_based": 1642,
+            "byte_ngram_hex": "20 6c 27",
+            "byte_ngram_display": " l'",
+            "count": 1,
+            "winner_minus_runner_up_contribution": 3.317929744720459,
+            "candidate_contributions": {
+              "fr": {
+                "learned_log_likelihood": -5.4398016929626465,
+                "contribution": -5.4398016929626465
+              },
+              "lb": {
+                "learned_log_likelihood": -8.757731437683105,
+                "contribution": -8.757731437683105
+              },
+              "jv": {
+                "learned_log_likelihood": -9.446966171264648,
+                "contribution": -9.446966171264648
+              },
+              "oc": {
+                "learned_log_likelihood": -5.423008441925049,
+                "contribution": -5.423008441925049
+              },
+              "br": {
+                "learned_log_likelihood": -8.342702865600586,
+                "contribution": -8.342702865600586
+              },
+              "es": {
+                "learned_log_likelihood": -10.77961540222168,
+                "contribution": -10.77961540222168
+              },
+              "en": {
+                "learned_log_likelihood": -10.433056831359863,
+                "contribution": -10.433056831359863
+              },
+              "de": {
+                "learned_log_likelihood": -12.040843963623047,
+                "contribution": -12.040843963623047
+              }
+            }
+          },
+          {
+            "feature_id_zero_based": 4,
+            "byte_ngram_hex": "20 c3 a0",
+            "byte_ngram_display": " à",
+            "count": 1,
+            "winner_minus_runner_up_contribution": 3.16440486907959,
+            "candidate_contributions": {
+              "fr": {
+                "learned_log_likelihood": -5.3056440353393555,
+                "contribution": -5.3056440353393555
+              },
+              "lb": {
+                "learned_log_likelihood": -8.470048904418945,
+                "contribution": -8.470048904418945
+              },
+              "jv": {
+                "learned_log_likelihood": -10.545578002929688,
+                "contribution": -10.545578002929688
+              },
+              "oc": {
+                "learned_log_likelihood": -9.068085670471191,
+                "contribution": -9.068085670471191
+              },
+              "br": {
+                "learned_log_likelihood": -8.50700569152832,
+                "contribution": -8.50700569152832
+              },
+              "es": {
+                "learned_log_likelihood": -11.347387313842773,
+                "contribution": -11.347387313842773
+              },
+              "en": {
+                "learned_log_likelihood": -11.61788272857666,
+                "contribution": -11.61788272857666
+              },
+              "de": {
+                "learned_log_likelihood": -12.971319198608398,
+                "contribution": -12.971319198608398
+              }
+            }
+          },
+          {
+            "feature_id_zero_based": 493,
+            "byte_ngram_hex": "20 c3 a0 20",
+            "byte_ngram_display": " à ",
+            "count": 1,
+            "winner_minus_runner_up_contribution": 3.1609158515930176,
+            "candidate_contributions": {
+              "fr": {
+                "learned_log_likelihood": -5.309133052825928,
+                "contribution": -5.309133052825928
+              },
+              "lb": {
+                "learned_log_likelihood": -8.470048904418945,
+                "contribution": -8.470048904418945
+              },
+              "jv": {
+                "learned_log_likelihood": -10.545578002929688,
+                "contribution": -10.545578002929688
+              },
+              "oc": {
+                "learned_log_likelihood": -9.627700805664062,
+                "contribution": -9.627700805664062
+              },
+              "br": {
+                "learned_log_likelihood": -8.50700569152832,
+                "contribution": -8.50700569152832
+              },
+              "es": {
+                "learned_log_likelihood": -11.353776931762695,
+                "contribution": -11.353776931762695
+              },
+              "en": {
+                "learned_log_likelihood": -11.647038459777832,
+                "contribution": -11.647038459777832
+              },
+              "de": {
+                "learned_log_likelihood": -12.971319198608398,
+                "contribution": -12.971319198608398
+              }
+            }
+          },
+          {
+            "feature_id_zero_based": 2073,
+            "byte_ngram_hex": "a0 20 6c",
+            "byte_ngram_display": "\\xa0 l",
+            "count": 1,
+            "winner_minus_runner_up_contribution": 2.921022415161133,
+            "candidate_contributions": {
+              "fr": {
+                "learned_log_likelihood": -6.24217414855957,
+                "contribution": -6.24217414855957
+              },
+              "lb": {
+                "learned_log_likelihood": -9.163196563720703,
+                "contribution": -9.163196563720703
+              },
+              "jv": {
+                "learned_log_likelihood": -10.545578002929688,
+                "contribution": -10.545578002929688
+              },
+              "oc": {
+                "learned_log_likelihood": -11.013995170593262,
+                "contribution": -11.013995170593262
+              },
+              "br": {
+                "learned_log_likelihood": -9.441314697265625,
+                "contribution": -9.441314697265625
+              },
+              "es": {
+                "learned_log_likelihood": -12.140953063964844,
+                "contribution": -12.140953063964844
+              },
+              "en": {
+                "learned_log_likelihood": -12.277128219604492,
+                "contribution": -12.277128219604492
+              },
+              "de": {
+                "learned_log_likelihood": -14.10629940032959,
+                "contribution": -14.10629940032959
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "vmaf_svr": {
+    "model": "Netflix VMAF v0.6.1 LIBSVM RBF nu-support vector regression",
+    "checkpoint": {
+      "path": "weights/vmaf/vmaf_v0.6.1.json",
+      "source_url": "https://raw.githubusercontent.com/Netflix/vmaf/v3.0.0/model/vmaf_v0.6.1.json",
+      "sha256": "5950d61fa1f861bd45d8149d80539ed9f3376cfc2495b8f0fa8e9f57cb131ee3",
+      "size_bytes": 19101
+    },
+    "method_sources": [
+      "https://github.com/Netflix/vmaf/blob/v3.0.0/resource/doc/models.md",
+      "https://github.com/Netflix/vmaf/blob/v3.0.0/libvmaf/src/predict.c",
+      "https://github.com/cjlin1/libsvm/blob/v337/svm.cpp"
+    ],
+    "scope": "Full support-vector regression over six published per-frame video features, including the default HDTV score clipping.",
+    "input_feature_decimal_places_in_source": 6,
+    "absolute_score_tolerance_for_rounded_inputs": 0.0002,
+    "ordered_feature_names": [
+      "VMAF_integer_feature_adm2_score",
+      "VMAF_integer_feature_motion2_score",
+      "VMAF_integer_feature_vif_scale0_score",
+      "VMAF_integer_feature_vif_scale1_score",
+      "VMAF_integer_feature_vif_scale2_score",
+      "VMAF_integer_feature_vif_scale3_score"
+    ],
+    "normalization_slopes_output_then_features": [
+      0.012020766332648465,
+      2.8098077502505414,
+      0.06264407466686016,
+      1.222763456258933,
+      1.5360318811084146,
+      1.7620864995501058,
+      2.08656468286432
+    ],
+    "normalization_intercepts_output_then_features": [
+      -0.3092981927591963,
+      -1.7993968597186747,
+      -0.003017198086831897,
+      -0.1728125095425364,
+      -0.5294309090081222,
+      -0.7577185792093722,
+      -1.083428597549764
+    ],
+    "score_clip_bounds": [
+      0.0,
+      100.0
+    ],
+    "gamma": 0.04,
+    "training_parameters": {
+      "C": 4.0,
+      "nu": 0.9
+    },
+    "learned_rho_subtracted_from_kernel_sum": -1.33133,
+    "support_vector_count": 211,
+    "coefficient_range": [
+      -4.0,
+      4.0
+    ],
+    "identical_minus_distorted_score": 13.572052372543624,
+    "probes": {
+      "published_distorted_frame_0": {
+        "input_features_in_model_order": [
+          0.962084,
+          0.0,
+          0.505712,
+          0.879061,
+          0.937873,
+          0.964301
+        ],
+        "normalized_input_features": [
+          0.9038742198733671,
+          -0.003017198086831897,
+          0.44555364344908116,
+          0.8208348124309219,
+          0.894894772383184,
+          0.9286478127009823
+        ],
+        "support_vector_terms_evaluated": 211,
+        "example_support_vector_terms": [
+          {
+            "support_vector_index_zero_based": 0,
+            "learned_support_vector": [
+              0.65734273,
+              0.34681232,
+              0.093755557,
+              0.60913934,
+              0.69117362,
+              0.73495824
+            ],
+            "learned_signed_dual_coefficient": -4.0,
+            "squared_distance": 0.43075329240245513,
+            "rbf_kernel_value": 0.9829174581431979,
+            "coefficient_times_kernel": -3.9316698325727915
+          },
+          {
+            "support_vector_index_zero_based": 1,
+            "learned_support_vector": [
+              0.8727433,
+              0.49612229,
+              0.59146724,
+              0.78105663,
+              0.84916292,
+              0.8882561
+            ],
+            "learned_signed_dual_coefficient": 4.0,
+            "squared_distance": 0.2767053369729946,
+            "rbf_kernel_value": 0.9889928138339275,
+            "coefficient_times_kernel": 3.95597125533571
+          },
+          {
+            "support_vector_index_zero_based": 2,
+            "learned_support_vector": [
+              0.89890005,
+              0.49612229,
+              0.66823667,
+              0.86050887,
+              0.90873162,
+              0.93335071
+            ],
+            "learned_signed_dual_coefficient": 4.0,
+            "squared_distance": 0.3005403076863616,
+            "rbf_kernel_value": 0.9880503585830436,
+            "coefficient_times_kernel": 3.9522014343321743
+          },
+          {
+            "support_vector_index_zero_based": 106,
+            "learned_support_vector": [
+              0.78080761,
+              0.04579546,
+              0.499439,
+              0.84012074,
+              0.90229375,
+              0.92936693
+            ],
+            "learned_signed_dual_coefficient": -4.0,
+            "squared_distance": 0.020858906707508777,
+            "rbf_kernel_value": 0.9991659917101048,
+            "coefficient_times_kernel": -3.996663966840419
+          },
+          {
+            "support_vector_index_zero_based": 142,
+            "learned_support_vector": [
+              0.79496816,
+              0.055921852,
+              0.42192974,
+              0.86711004,
+              0.94030868,
+              0.96084539
+            ],
+            "learned_signed_dual_coefficient": 4.0,
+            "squared_distance": 0.021132933991975886,
+            "rbf_kernel_value": 0.9991550398203897,
+            "coefficient_times_kernel": 3.9966201592815587
+          }
+        ],
+        "positive_term_sum": 405.41154496095515,
+        "negative_term_sum": -406.0441561440721,
+        "all_support_vector_terms_sum": -0.632611183116923,
+        "normalized_svr_output_after_subtracting_rho": 0.6987188168830769,
+        "denormalized_score": 83.85630181534214,
+        "score_after_clipping": 83.85630181534214,
+        "published_reference_score": 83.856285,
+        "absolute_difference_from_reference": 1.6815342135600986e-05,
+        "probe_source_url": "https://github.com/Netflix/vmaf/blob/v3.0.0/libvmaf/tools/README.md#example",
+        "source_description": "Frame 0 from the published libvmaf CLI comparison of src01_hrc00_576x324.yuv and src01_hrc01_576x324.yuv. The feature inputs are printed to six decimal places."
+      },
+      "identical_reference_frame_0": {
+        "input_features_in_model_order": [
+          1.000002,
+          0.0,
+          1.0,
+          1.0,
+          0.999999,
+          0.999999
+        ],
+        "normalized_input_features": [
+          1.0104165101473672,
+          -0.003017198086831897,
+          1.0499509467163965,
+          1.0066009721002924,
+          1.0043661582542338,
+          1.003133998749873
+        ],
+        "support_vector_terms_evaluated": 211,
+        "example_support_vector_terms": [
+          {
+            "support_vector_index_zero_based": 0,
+            "learned_support_vector": [
+              0.65734273,
+              0.34681232,
+              0.093755557,
+              0.60913934,
+              0.69117362,
+              0.73495824
+            ],
+            "learned_signed_dual_coefficient": -4.0,
+            "squared_distance": 1.4893349618583356,
+            "rbf_kernel_value": 0.9421663774786093,
+            "coefficient_times_kernel": -3.7686655099144373
+          },
+          {
+            "support_vector_index_zero_based": 1,
+            "learned_support_vector": [
+              0.8727433,
+              0.49612229,
+              0.59146724,
+              0.78105663,
+              0.84916292,
+              0.8882561
+            ],
+            "learned_signed_dual_coefficient": 4.0,
+            "squared_distance": 0.5664566777235128,
+            "rbf_kernel_value": 0.9775965035767068,
+            "coefficient_times_kernel": 3.910386014306827
+          },
+          {
+            "support_vector_index_zero_based": 2,
+            "learned_support_vector": [
+              0.89890005,
+              0.49612229,
+              0.66823667,
+              0.86050887,
+              0.90873162,
+              0.93335071
+            ],
+            "learned_signed_dual_coefficient": 4.0,
+            "squared_distance": 0.4426405130924367,
+            "rbf_kernel_value": 0.9824502029695094,
+            "coefficient_times_kernel": 3.9298008118780374
+          },
+          {
+            "support_vector_index_zero_based": 108,
+            "learned_support_vector": [
+              0.99645027,
+              0.014623935,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "learned_signed_dual_coefficient": 4.0,
+            "squared_distance": 0.003073820637039594,
+            "rbf_kernel_value": 0.9998770547329073,
+            "coefficient_times_kernel": 3.9995082189316293
+          },
+          {
+            "support_vector_index_zero_based": 114,
+            "learned_support_vector": [
+              0.8878718,
+              0.014623935,
+              0.81445984,
+              0.96615706,
+              0.98858241,
+              0.99176534
+            ],
+            "learned_signed_dual_coefficient": -4.0,
+            "squared_distance": 0.07279856004090307,
+            "rbf_kernel_value": 0.997092293190375,
+            "coefficient_times_kernel": -3.9883691727615
+          }
+        ],
+        "positive_term_sum": 394.3958213339237,
+        "negative_term_sum": -394.8652860468158,
+        "all_support_vector_terms_sum": -0.4694647128921091,
+        "normalized_svr_output_after_subtracting_rho": 0.8618652871078908,
+        "denormalized_score": 97.42835418788576,
+        "score_after_clipping": 97.42835418788576,
+        "published_reference_score": 97.428478,
+        "absolute_difference_from_reference": 0.00012381211423928562,
+        "probe_source_url": "https://github.com/Netflix/vmaf/issues/1431",
+        "source_description": "Frame 0 of src01_hrc00_576x324.yuv compared with itself in the issue's libvmaf log. Motion is zero and the other features are close to one."
+      },
+      "identical_reference_frame_1": {
+        "input_features_in_model_order": [
+          1.000002,
+          4.21568,
+          1.0,
+          1.0,
+          0.999999,
+          0.999999
+        ],
+        "normalized_input_features": [
+          1.0104165101473672,
+          0.2610701746047572,
+          1.0499509467163965,
+          1.0066009721002924,
+          1.0043661582542338,
+          1.003133998749873
+        ],
+        "support_vector_terms_evaluated": 211,
+        "example_support_vector_terms": [
+          {
+            "support_vector_index_zero_based": 0,
+            "learned_support_vector": [
+              0.65734273,
+              0.34681232,
+              0.093755557,
+              0.60913934,
+              0.69117362,
+              0.73495824
+            ],
+            "learned_signed_dual_coefficient": -4.0,
+            "squared_distance": 1.3743059856304498,
+            "rbf_kernel_value": 0.9465114232899212,
+            "coefficient_times_kernel": -3.786045693159685
+          },
+          {
+            "support_vector_index_zero_based": 1,
+            "learned_support_vector": [
+              0.8727433,
+              0.49612229,
+              0.59146724,
+              0.78105663,
+              0.84916292,
+              0.8882561
+            ],
+            "learned_signed_dual_coefficient": 4.0,
+            "squared_distance": 0.3725659461077067,
+            "rbf_kernel_value": 0.9852078568943814,
+            "coefficient_times_kernel": 3.9408314275775256
+          },
+          {
+            "support_vector_index_zero_based": 2,
+            "learned_support_vector": [
+              0.89890005,
+              0.49612229,
+              0.66823667,
+              0.86050887,
+              0.90873162,
+              0.93335071
+            ],
+            "learned_signed_dual_coefficient": 4.0,
+            "squared_distance": 0.2487497814766306,
+            "rbf_kernel_value": 0.9900993461328322,
+            "coefficient_times_kernel": 3.960397384531329
+          },
+          {
+            "support_vector_index_zero_based": 108,
+            "learned_support_vector": [
+              0.99645027,
+              0.014623935,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "learned_signed_dual_coefficient": 4.0,
+            "squared_distance": 0.06349836007577767,
+            "rbf_kernel_value": 0.9974632885011222,
+            "coefficient_times_kernel": 3.989853154004489
+          },
+          {
+            "support_vector_index_zero_based": 114,
+            "learned_support_vector": [
+              0.8878718,
+              0.014623935,
+              0.81445984,
+              0.96615706,
+              0.98858241,
+              0.99176534
+            ],
+            "learned_signed_dual_coefficient": -4.0,
+            "squared_distance": 0.13322309947964114,
+            "rbf_kernel_value": 0.9946852495484755,
+            "coefficient_times_kernel": -3.978740998193902
+          }
+        ],
+        "positive_term_sum": 395.860257582002,
+        "negative_term_sum": -396.2607810502425,
+        "all_support_vector_terms_sum": -0.4005234682404668,
+        "normalized_svr_output_after_subtracting_rho": 0.9308065317595331,
+        "denormalized_score": 103.16353302289875,
+        "score_after_clipping": 100.0,
+        "published_reference_score": 100.0,
+        "absolute_difference_from_reference": 0.0,
+        "probe_source_url": "https://github.com/Netflix/vmaf/issues/1431",
+        "source_description": "Frame 1 of the same identical-clips log, with positive motion. The score activates the upper clipping bound."
+      }
+    }
+  }
+}

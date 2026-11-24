@@ -1,0 +1,203 @@
+{
+  "format": "checkpoint-scalars/1",
+  "scope": "Stored values in the local weight sets selected for the traces, including the original Inkling example.",
+  "indexing": "All scalar positions are zero-based. Each model index describes its file format, source keys, and stored scalar order.",
+  "model_count": 11,
+  "scalar_count": 52506774,
+  "models": [
+    {
+      "id": "inkling-2-mini",
+      "model": "Inkling 2 Mini IQ4_NL GGUF",
+      "index": "inkling-2-mini/index.json",
+      "scalar_count": 26945664,
+      "global_scalar_start": 0,
+      "global_scalar_stop_exclusive": 26945664,
+      "files": [
+        {
+          "path": "inkling-2-mini/stored_bytes.bin",
+          "bytes": 28752720
+        },
+        {
+          "path": "inkling-2-mini/values.npy",
+          "bytes": 107782784
+        }
+      ]
+    },
+    {
+      "id": "mamba-130m",
+      "model": "State Spaces Mamba-130M",
+      "index": "mamba-130m/index.json",
+      "scalar_count": 224256,
+      "global_scalar_start": 26945664,
+      "global_scalar_stop_exclusive": 27169920,
+      "files": [
+        {
+          "path": "mamba-130m/values.npy",
+          "bytes": 897152
+        }
+      ]
+    },
+    {
+      "id": "squeezenet1_1",
+      "model": "TorchVision SqueezeNet 1.1 ImageNet-1K V1",
+      "index": "squeezenet1_1/index.json",
+      "scalar_count": 1792,
+      "global_scalar_start": 27169920,
+      "global_scalar_stop_exclusive": 27171712,
+      "files": [
+        {
+          "path": "squeezenet1_1/values.npy",
+          "bytes": 7296
+        }
+      ]
+    },
+    {
+      "id": "encodec-24khz",
+      "model": "Meta EnCodec 24 kHz",
+      "index": "encodec-24khz/index.json",
+      "scalar_count": 262144,
+      "global_scalar_start": 27171712,
+      "global_scalar_stop_exclusive": 27433856,
+      "files": [
+        {
+          "path": "encodec-24khz/values.npy",
+          "bytes": 1048704
+        }
+      ]
+    },
+    {
+      "id": "graphconv",
+      "model": "Cora GraphConv",
+      "index": "graphconv/index.json",
+      "scalar_count": 100032,
+      "global_scalar_start": 27433856,
+      "global_scalar_stop_exclusive": 27533888,
+      "files": [
+        {
+          "path": "graphconv/values.npy",
+          "bytes": 400256
+        }
+      ]
+    },
+    {
+      "id": "opencv-haar",
+      "model": "OpenCV 4.12.0 frontal-face Haar cascade",
+      "index": "opencv-haar/index.json",
+      "scalar_count": 49448,
+      "global_scalar_start": 27533888,
+      "global_scalar_stop_exclusive": 27583336,
+      "files": [
+        {
+          "path": "opencv-haar/lookup.json",
+          "bytes": 39467
+        },
+        {
+          "path": "opencv-haar/values.txt",
+          "bytes": 315678
+        }
+      ]
+    },
+    {
+      "id": "langid",
+      "model": "langid.py 1.1.6 pretrained multinomial naive Bayes",
+      "index": "langid/index.json",
+      "scalar_count": 3078890,
+      "global_scalar_start": 27583336,
+      "global_scalar_stop_exclusive": 30662226,
+      "files": [
+        {
+          "path": "langid/class_prior_terms.npy",
+          "bytes": 516
+        },
+        {
+          "path": "langid/dfa_emission_features.npy",
+          "bytes": 20866
+        },
+        {
+          "path": "langid/dfa_emission_states.npy",
+          "bytes": 17440
+        },
+        {
+          "path": "langid/dfa_transitions.npy",
+          "bytes": 4668544
+        },
+        {
+          "path": "langid/feature_likelihoods.npy",
+          "bytes": 2902368
+        },
+        {
+          "path": "langid/lookup.json",
+          "bytes": 192338
+        }
+      ]
+    },
+    {
+      "id": "vmaf",
+      "model": "Netflix VMAF v0.6.1 LIBSVM RBF nu-SVR",
+      "index": "vmaf/index.json",
+      "scalar_count": 2748,
+      "global_scalar_start": 30662226,
+      "global_scalar_stop_exclusive": 30664974,
+      "files": [
+        {
+          "path": "vmaf/lookup.json",
+          "bytes": 5364
+        },
+        {
+          "path": "vmaf/values.txt",
+          "bytes": 17146
+        }
+      ]
+    },
+    {
+      "id": "jieba",
+      "model": "Jieba v0.42.1 finalseg",
+      "index": "jieba/index.json",
+      "scalar_count": 35236,
+      "global_scalar_start": 30664974,
+      "global_scalar_stop_exclusive": 30700210,
+      "files": [
+        {
+          "path": "jieba/values.jsonl",
+          "bytes": 4858671
+        }
+      ]
+    },
+    {
+      "id": "riva-arpa",
+      "model": "NVIDIA Riva ASR English LM deployable_v1.0 pruned trigram",
+      "index": "riva-arpa/index.json",
+      "scalar_count": 1806564,
+      "global_scalar_start": 30700210,
+      "global_scalar_stop_exclusive": 32506774,
+      "files": [
+        {
+          "path": "riva-arpa/records.tsv.gz",
+          "bytes": 33353409
+        },
+        {
+          "path": "riva-arpa/values.txt.gz",
+          "bytes": 11177822
+        }
+      ]
+    },
+    {
+      "id": "glove",
+      "model": "Stanford GloVe 6B 50d, Gensim word2vec-format repack",
+      "index": "glove/index.json",
+      "scalar_count": 20000000,
+      "global_scalar_start": 32506774,
+      "global_scalar_stop_exclusive": 52506774,
+      "files": [
+        {
+          "path": "glove/values.npy",
+          "bytes": 320000128
+        },
+        {
+          "path": "glove/vocabulary.tsv",
+          "bytes": 6045378
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "model": "OpenCV 4.12.0 frontal-face Haar cascade",
+  "checkpoint": {
+    "path": "weights/opencv-haar/haarcascade_frontalface_default.xml",
+    "source_url": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/data/haarcascades/haarcascade_frontalface_default.xml",
+    "sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0",
+    "size_bytes": 930127
+  },
+  "scalar_count": 49448,
+  "streams": [
+    {
+      "path": "values.txt",
+      "format": "text, one exact source literal per line",
+      "scalar_count": 49448,
+      "sha256": "f404c660f004588eb5579147c3ea41bf8171714e184d16f1872d686c95da17eb"
+    }
+  ],
+  "lookup_mapping": {
+    "path": "lookup.json",
+    "index_base": 0,
+    "offset_convention": "Offsets address scalar items in their indicated stream. End offsets are exclusive."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "model": "NVIDIA Riva ASR English LM deployable_v1.0 pruned trigram",
+  "scalar_count": 1806564,
+  "sources": [
+    "weights/nvidia-riva-arpa/3-gram.pruned.3e-7.arpa"
+  ],
+  "ngram_count_by_order": {
+    "1": 200003,
+    "2": 1016673,
+    "3": 340026
+  },
+  "probability_scalar_count": 1556702,
+  "backoff_scalar_count": 249862,
+  "backoff_count_by_order": {
+    "1": 89318,
+    "2": 160544,
+    "3": 0
+  },
+  "formats": {
+    "values.txt.gz": "Gzip-compressed ASCII, one original base-10 logarithm literal per line.",
+    "records.tsv.gz": "Gzip-compressed UTF-8 TSV, one n-gram per source record plus a header."
+  },
+  "lookup": {
+    "keys": [
+      "order",
+      "ngram"
+    ],
+    "source_record_index": "Zero-based among all n-gram rows in source file order.",
+    "section_record_index": "Zero-based within the source section for the n-gram's order.",
+    "source_line": "One-based line in the ARPA source file.",
+    "scalar_indices": "The probability and backoff indices are zero-based line indices in values.txt.gz after decompression. A blank backoff index means that field is absent from the source record."
+  }
+}

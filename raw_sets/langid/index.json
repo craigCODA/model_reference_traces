@@ -1,0 +1,64 @@
+{
+  "model": "langid.py 1.1.6 pretrained multinomial naive Bayes",
+  "checkpoint": {
+    "path": "weights/langid/langid-1.1.6.tar.gz",
+    "source_url": "https://files.pythonhosted.org/packages/ea/4c/0fb7d900d3b0b9c8703be316fbddffecdab23c64e1b46c7a83561d78bd43/langid-1.1.6.tar.gz",
+    "sha256": "044bcae1912dab85c33d8e98f2811b8f4ff1213e5e9a9e9510137b84da2cb293",
+    "size_bytes": 1925978
+  },
+  "scalar_count": 3078890,
+  "parameter_scalar_count": 725657,
+  "stored_lookup_scalar_count": 2353233,
+  "streams": [
+    {
+      "path": "feature_likelihoods.npy",
+      "format": "npy",
+      "dtype": "<f4",
+      "source_field": "nb_ptc",
+      "role": "parameter",
+      "scalar_count": 725560,
+      "sha256": "670a2278623ad19e393a279fdb3a5636c3d302caf5f784be07a284ad3f4bbea9"
+    },
+    {
+      "path": "class_prior_terms.npy",
+      "format": "npy",
+      "dtype": "<f4",
+      "source_field": "nb_pc",
+      "role": "parameter",
+      "scalar_count": 97,
+      "sha256": "fceba5a1ca0b06dae09d445a0e3af1449fb18999143e9104313aa183738eb6d1"
+    },
+    {
+      "path": "dfa_transitions.npy",
+      "format": "npy",
+      "dtype": "<u2",
+      "source_field": "tk_nextmove",
+      "role": "stored_lookup",
+      "scalar_count": 2334208,
+      "sha256": "28c1be7a049ba82eb4eee01c0652f9d9c641b022c389c67c83a25ebface42ee3"
+    },
+    {
+      "path": "dfa_emission_states.npy",
+      "format": "npy",
+      "dtype": "<u2",
+      "source_field": "tk_output keys",
+      "role": "stored_lookup",
+      "scalar_count": 8656,
+      "sha256": "a3ac740e8a964e70f5ec7c79c22bebfc9a0c1df544fc960d4a7cfd15d9e734f5"
+    },
+    {
+      "path": "dfa_emission_features.npy",
+      "format": "npy",
+      "dtype": "<u2",
+      "source_field": "tk_output tuple values",
+      "role": "stored_lookup",
+      "scalar_count": 10369,
+      "sha256": "b3b4f5b9e7e0fd276cc974ef87e905e9d929e816e052c561fa66ab2a31c8b633"
+    }
+  ],
+  "lookup_mapping": {
+    "path": "lookup.json",
+    "index_base": 0,
+    "offset_convention": "Offsets address scalar items in their indicated stream. End offsets are exclusive."
+  }
+}

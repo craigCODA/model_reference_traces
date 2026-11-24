@@ -1,0 +1,351 @@
+{
+  "model": "Inkling 2 Mini IQ4_NL GGUF",
+  "scope": "Layer 0 attention parameters, the embedding normalizer, and the token embedding rows for the observed prompt.",
+  "checkpoint": {
+    "path": "inkling-disk-vault/weights/Inkling-2-Mini-IQ4_NL.gguf",
+    "path_base": "research",
+    "byte_size": 17627940768
+  },
+  "token_ids": [
+    220,
+    38328,
+    153721,
+    177873,
+    13,
+    220,
+    38328
+  ],
+  "scalar_count": 26945664,
+  "array": {
+    "path": "values.npy",
+    "format": "npy",
+    "dtype": "<f4",
+    "shape": [
+      26945664
+    ]
+  },
+  "stored_bytes": {
+    "path": "stored_bytes.bin",
+    "size_bytes": 28752720
+  },
+  "components": [
+    {
+      "original_key": "token_embd.weight",
+      "original_shape": [
+        201024,
+        2304
+      ],
+      "source_flat_scalar_start": 29952,
+      "gguf_tensor_type": 8,
+      "source_byte_start": 504134640,
+      "source_byte_stop_exclusive": 504137088,
+      "packed_byte_start": 0,
+      "packed_byte_stop_exclusive": 2448,
+      "scalar_start": 0,
+      "scalar_stop_exclusive": 2304,
+      "row_count": 1
+    },
+    {
+      "original_key": "token_embd.weight",
+      "original_shape": [
+        201024,
+        2304
+      ],
+      "source_flat_scalar_start": 506880,
+      "gguf_tensor_type": 8,
+      "source_byte_start": 504641376,
+      "source_byte_stop_exclusive": 504643824,
+      "packed_byte_start": 2448,
+      "packed_byte_stop_exclusive": 4896,
+      "scalar_start": 2304,
+      "scalar_stop_exclusive": 4608,
+      "row_count": 1
+    },
+    {
+      "original_key": "token_embd.weight",
+      "original_shape": [
+        201024,
+        2304
+      ],
+      "source_flat_scalar_start": 88307712,
+      "gguf_tensor_type": 8,
+      "source_byte_start": 597929760,
+      "source_byte_stop_exclusive": 597932208,
+      "packed_byte_start": 4896,
+      "packed_byte_stop_exclusive": 7344,
+      "scalar_start": 4608,
+      "scalar_stop_exclusive": 6912,
+      "row_count": 1
+    },
+    {
+      "original_key": "token_embd.weight",
+      "original_shape": [
+        201024,
+        2304
+      ],
+      "source_flat_scalar_start": 354173184,
+      "gguf_tensor_type": 8,
+      "source_byte_start": 880411824,
+      "source_byte_stop_exclusive": 880414272,
+      "packed_byte_start": 7344,
+      "packed_byte_stop_exclusive": 9792,
+      "scalar_start": 6912,
+      "scalar_stop_exclusive": 9216,
+      "row_count": 1
+    },
+    {
+      "original_key": "token_embd.weight",
+      "original_shape": [
+        201024,
+        2304
+      ],
+      "source_flat_scalar_start": 409819392,
+      "gguf_tensor_type": 8,
+      "source_byte_start": 939535920,
+      "source_byte_stop_exclusive": 939538368,
+      "packed_byte_start": 9792,
+      "packed_byte_stop_exclusive": 12240,
+      "scalar_start": 9216,
+      "scalar_stop_exclusive": 11520,
+      "row_count": 1
+    },
+    {
+      "original_key": "token_embd_norm.weight",
+      "original_shape": [
+        2304
+      ],
+      "source_flat_scalar_start": 0,
+      "gguf_tensor_type": 0,
+      "source_byte_start": 996209568,
+      "source_byte_stop_exclusive": 996218784,
+      "packed_byte_start": 12240,
+      "packed_byte_stop_exclusive": 21456,
+      "scalar_start": 11520,
+      "scalar_stop_exclusive": 13824,
+      "row_count": 1
+    },
+    {
+      "original_key": "blk.0.attn_gate.weight",
+      "original_shape": [
+        3072,
+        2304
+      ],
+      "source_flat_scalar_start": 0,
+      "gguf_tensor_type": 8,
+      "source_byte_start": 996218784,
+      "source_byte_stop_exclusive": 1003739040,
+      "packed_byte_start": 21456,
+      "packed_byte_stop_exclusive": 7541712,
+      "scalar_start": 13824,
+      "scalar_stop_exclusive": 7091712,
+      "row_count": 3072
+    },
+    {
+      "original_key": "blk.0.attn_k.weight",
+      "original_shape": [
+        1024,
+        2304
+      ],
+      "source_flat_scalar_start": 0,
+      "gguf_tensor_type": 8,
+      "source_byte_start": 1003739040,
+      "source_byte_stop_exclusive": 1006245792,
+      "packed_byte_start": 7541712,
+      "packed_byte_stop_exclusive": 10048464,
+      "scalar_start": 7091712,
+      "scalar_stop_exclusive": 9451008,
+      "row_count": 1024
+    },
+    {
+      "original_key": "blk.0.attn_k_conv.weight",
+      "original_shape": [
+        1024,
+        4
+      ],
+      "source_flat_scalar_start": 0,
+      "gguf_tensor_type": 0,
+      "source_byte_start": 1006245792,
+      "source_byte_stop_exclusive": 1006262176,
+      "packed_byte_start": 10048464,
+      "packed_byte_stop_exclusive": 10064848,
+      "scalar_start": 9451008,
+      "scalar_stop_exclusive": 9455104,
+      "row_count": 1024
+    },
+    {
+      "original_key": "blk.0.attn_norm.weight",
+      "original_shape": [
+        2304
+      ],
+      "source_flat_scalar_start": 0,
+      "gguf_tensor_type": 0,
+      "source_byte_start": 1006262176,
+      "source_byte_stop_exclusive": 1006271392,
+      "packed_byte_start": 10064848,
+      "packed_byte_stop_exclusive": 10074064,
+      "scalar_start": 9455104,
+      "scalar_stop_exclusive": 9457408,
+      "row_count": 1
+    },
+    {
+      "original_key": "blk.0.attn_output.weight",
+      "original_shape": [
+        2304,
+        3072
+      ],
+      "source_flat_scalar_start": 0,
+      "gguf_tensor_type": 8,
+      "source_byte_start": 1006271392,
+      "source_byte_stop_exclusive": 1013791648,
+      "packed_byte_start": 10074064,
+      "packed_byte_stop_exclusive": 17594320,
+      "scalar_start": 9457408,
+      "scalar_stop_exclusive": 16535296,
+      "row_count": 2304
+    },
+    {
+      "original_key": "blk.0.attn_post_conv.weight",
+      "original_shape": [
+        2304,
+        4
+      ],
+      "source_flat_scalar_start": 0,
+      "gguf_tensor_type": 0,
+      "source_byte_start": 1013791648,
+      "source_byte_stop_exclusive": 1013828512,
+      "packed_byte_start": 17594320,
+      "packed_byte_stop_exclusive": 17631184,
+      "scalar_start": 16535296,
+      "scalar_stop_exclusive": 16544512,
+      "row_count": 2304
+    },
+    {
+      "original_key": "blk.0.attn_q.weight",
+      "original_shape": [
+        3072,
+        2304
+      ],
+      "source_flat_scalar_start": 0,
+      "gguf_tensor_type": 8,
+      "source_byte_start": 1013828512,
+      "source_byte_stop_exclusive": 1021348768,
+      "packed_byte_start": 17631184,
+      "packed_byte_stop_exclusive": 25151440,
+      "scalar_start": 16544512,
+      "scalar_stop_exclusive": 23622400,
+      "row_count": 3072
+    },
+    {
+      "original_key": "blk.0.attn_q_clip.weight",
+      "original_shape": [
+        24,
+        128
+      ],
+      "source_flat_scalar_start": 0,
+      "gguf_tensor_type": 0,
+      "source_byte_start": 1021348768,
+      "source_byte_stop_exclusive": 1021361056,
+      "packed_byte_start": 25151440,
+      "packed_byte_stop_exclusive": 25163728,
+      "scalar_start": 23622400,
+      "scalar_stop_exclusive": 23625472,
+      "row_count": 24
+    },
+    {
+      "original_key": "blk.0.attn_rel.weight",
+      "original_shape": [
+        384,
+        2304
+      ],
+      "source_flat_scalar_start": 0,
+      "gguf_tensor_type": 8,
+      "source_byte_start": 1021361056,
+      "source_byte_stop_exclusive": 1022301088,
+      "packed_byte_start": 25163728,
+      "packed_byte_stop_exclusive": 26103760,
+      "scalar_start": 23625472,
+      "scalar_stop_exclusive": 24510208,
+      "row_count": 384
+    },
+    {
+      "original_key": "blk.0.attn_rel_bias.weight",
+      "original_shape": [
+        1024,
+        16
+      ],
+      "source_flat_scalar_start": 0,
+      "gguf_tensor_type": 0,
+      "source_byte_start": 1022301088,
+      "source_byte_stop_exclusive": 1022366624,
+      "packed_byte_start": 26103760,
+      "packed_byte_stop_exclusive": 26169296,
+      "scalar_start": 24510208,
+      "scalar_stop_exclusive": 24526592,
+      "row_count": 1024
+    },
+    {
+      "original_key": "blk.0.attn_rel_clip.weight",
+      "original_shape": [
+        24,
+        16
+      ],
+      "source_flat_scalar_start": 0,
+      "gguf_tensor_type": 0,
+      "source_byte_start": 1022366624,
+      "source_byte_stop_exclusive": 1022368160,
+      "packed_byte_start": 26169296,
+      "packed_byte_stop_exclusive": 26170832,
+      "scalar_start": 24526592,
+      "scalar_stop_exclusive": 24526976,
+      "row_count": 24
+    },
+    {
+      "original_key": "blk.0.attn_sink_proj.weight",
+      "original_shape": [
+        24,
+        2304
+      ],
+      "source_flat_scalar_start": 0,
+      "gguf_tensor_type": 8,
+      "source_byte_start": 1022368160,
+      "source_byte_stop_exclusive": 1022426912,
+      "packed_byte_start": 26170832,
+      "packed_byte_stop_exclusive": 26229584,
+      "scalar_start": 24526976,
+      "scalar_stop_exclusive": 24582272,
+      "row_count": 24
+    },
+    {
+      "original_key": "blk.0.attn_v.weight",
+      "original_shape": [
+        1024,
+        2304
+      ],
+      "source_flat_scalar_start": 0,
+      "gguf_tensor_type": 8,
+      "source_byte_start": 1022426912,
+      "source_byte_stop_exclusive": 1024933664,
+      "packed_byte_start": 26229584,
+      "packed_byte_stop_exclusive": 28736336,
+      "scalar_start": 24582272,
+      "scalar_stop_exclusive": 26941568,
+      "row_count": 1024
+    },
+    {
+      "original_key": "blk.0.attn_v_conv.weight",
+      "original_shape": [
+        1024,
+        4
+      ],
+      "source_flat_scalar_start": 0,
+      "gguf_tensor_type": 0,
+      "source_byte_start": 1024933664,
+      "source_byte_stop_exclusive": 1024950048,
+      "packed_byte_start": 28736336,
+      "packed_byte_stop_exclusive": 28752720,
+      "scalar_start": 26941568,
+      "scalar_stop_exclusive": 26945664,
+      "row_count": 1024
+    }
+  ]
+}

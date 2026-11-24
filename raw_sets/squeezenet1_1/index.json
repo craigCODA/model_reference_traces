@@ -1,0 +1,64 @@
+{
+  "model": "TorchVision SqueezeNet 1.1 ImageNet-1K V1",
+  "model_id": "squeezenet1_1",
+  "scalar_count": 1792,
+  "array": "values.npy",
+  "array_shape": [
+    1792
+  ],
+  "array_dtype": "float32",
+  "array_dtype_descriptor": "<f4",
+  "array_sha256": "3f7061a4b768078b4a77bb03957cf4bb7d8a40af00395a107ba97a8abca5e413",
+  "checkpoint_url": "https://download.pytorch.org/models/squeezenet1_1-b8a52dc0.pth",
+  "source_paths_relative_to": "model-reference-traces project directory",
+  "scalar_order": "Zero-based offsets into the C-order flattened array. Scalar stops are exclusive.",
+  "byte_order": "Little-endian. Source byte ranges are inclusive and zero-based within each file.",
+  "scope": "The first convolution includes 64 learned RGB kernels and all 64 corresponding biases.",
+  "components": [
+    {
+      "original_key": "features.0.weight",
+      "shape": [
+        64,
+        3,
+        3,
+        3
+      ],
+      "dtype": "float32",
+      "scalar_count": 1728,
+      "scalar_start": 0,
+      "scalar_stop_exclusive": 1728,
+      "storage_dtype": "torch.float32",
+      "source_path": "weights/squeezenet1_1/squeezenet1_1-b8a52dc0.pth",
+      "source_sha256": "b8a52dc049b60e4b6ab68ad0df457362afab8b6304b2febdc1650a5dab4d7e7b",
+      "source_byte_range_inclusive": [
+        1208448,
+        1215359
+      ],
+      "checkpoint_byte_range_inclusive": [
+        1208448,
+        1215359
+      ]
+    },
+    {
+      "original_key": "features.0.bias",
+      "shape": [
+        64
+      ],
+      "dtype": "float32",
+      "scalar_count": 64,
+      "scalar_start": 1728,
+      "scalar_stop_exclusive": 1792,
+      "storage_dtype": "torch.float32",
+      "source_path": "weights/squeezenet1_1/squeezenet1_1-b8a52dc0.pth",
+      "source_sha256": "b8a52dc049b60e4b6ab68ad0df457362afab8b6304b2febdc1650a5dab4d7e7b",
+      "source_byte_range_inclusive": [
+        258432,
+        258687
+      ],
+      "checkpoint_byte_range_inclusive": [
+        258432,
+        258687
+      ]
+    }
+  ]
+}

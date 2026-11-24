@@ -1,0 +1,46 @@
+{
+  "model": "Jieba v0.42.1 finalseg",
+  "scalar_count": 35236,
+  "sources": [
+    "weights/jieba-v0.42.1/prob_start.py",
+    "weights/jieba-v0.42.1/prob_trans.py",
+    "weights/jieba-v0.42.1/prob_emit.py"
+  ],
+  "tables": {
+    "start": {
+      "source": "weights/jieba-v0.42.1/prob_start.py",
+      "first_scalar_index": 0,
+      "scalar_count": 4
+    },
+    "trans": {
+      "source": "weights/jieba-v0.42.1/prob_trans.py",
+      "first_scalar_index": 4,
+      "scalar_count": 8
+    },
+    "emit": {
+      "source": "weights/jieba-v0.42.1/prob_emit.py",
+      "first_scalar_index": 12,
+      "scalar_count": 35224
+    }
+  },
+  "formats": {
+    "values.jsonl": "UTF-8 JSON Lines, one original numeric literal string per record"
+  },
+  "lookup": {
+    "record_index": "Zero-based JSONL record index equals scalar_index in source dictionary order.",
+    "keys_by_table": {
+      "start": [
+        "state"
+      ],
+      "trans": [
+        "previous_state",
+        "next_state"
+      ],
+      "emit": [
+        "state",
+        "character"
+      ]
+    },
+    "source_position": "One-based source line and zero-based UTF-8 byte column in the table's source file."
+  }
+}

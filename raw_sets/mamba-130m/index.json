@@ -1,0 +1,132 @@
+{
+  "model": "State Spaces Mamba-130M",
+  "model_id": "mamba-130m",
+  "scalar_count": 224256,
+  "array": "values.npy",
+  "array_shape": [
+    224256
+  ],
+  "array_dtype": "float32",
+  "array_dtype_descriptor": "<f4",
+  "array_sha256": "6dc2cb3befaef14fe7184d39d6cd2781b193818d258f2bd8ff75d56d0abe6e8f",
+  "checkpoint_url": "https://huggingface.co/state-spaces/mamba-130m/resolve/ea8027ed54e00893f4f197d1a3af820b96e86fb9/model.safetensors",
+  "source_paths_relative_to": "model-reference-traces project directory",
+  "scalar_order": "Zero-based offsets into the C-order flattened array. Scalar stops are exclusive.",
+  "byte_order": "Little-endian. Source byte ranges are inclusive and zero-based within each file.",
+  "scope": "The five complete layer-0 mixer tensors in the three weight caches used in the trace. The stored D values include untraced channels. The stored x projection includes columns whose controlled inputs were always zero. The header files hold tensor metadata.",
+  "components": [
+    {
+      "original_key": "backbone.layers.0.mixer.A_log",
+      "shape": [
+        1536,
+        16
+      ],
+      "dtype": "float32",
+      "scalar_count": 24576,
+      "scalar_start": 0,
+      "scalar_stop_exclusive": 24576,
+      "storage_dtype": "F32",
+      "source_path": "weights/mamba-130m/A_log_D.bin",
+      "source_sha256": "9be0db4acd41b13040f84d7ef83fe92c321b5a4ac584387531ac4339c59f3a3a",
+      "source_byte_range_inclusive": [
+        0,
+        98303
+      ],
+      "checkpoint_byte_range_inclusive": [
+        154486312,
+        154584615
+      ],
+      "source_header_path": "weights/mamba-130m/header.json"
+    },
+    {
+      "original_key": "backbone.layers.0.mixer.D",
+      "shape": [
+        1536
+      ],
+      "dtype": "float32",
+      "scalar_count": 1536,
+      "scalar_start": 24576,
+      "scalar_stop_exclusive": 26112,
+      "storage_dtype": "F32",
+      "source_path": "weights/mamba-130m/A_log_D.bin",
+      "source_sha256": "9be0db4acd41b13040f84d7ef83fe92c321b5a4ac584387531ac4339c59f3a3a",
+      "source_byte_range_inclusive": [
+        98304,
+        104447
+      ],
+      "checkpoint_byte_range_inclusive": [
+        154584616,
+        154590759
+      ],
+      "source_header_path": "weights/mamba-130m/header.json"
+    },
+    {
+      "original_key": "backbone.layers.0.mixer.dt_proj.bias",
+      "shape": [
+        1536
+      ],
+      "dtype": "float32",
+      "scalar_count": 1536,
+      "scalar_start": 26112,
+      "scalar_stop_exclusive": 27648,
+      "storage_dtype": "F32",
+      "source_path": "weights/mamba-130m/dt_proj.bin",
+      "source_sha256": "18e0245acd7f233ee5420a148ca89a97996ed81fb6715819b7a23bd7e64dd60b",
+      "source_byte_range_inclusive": [
+        0,
+        6143
+      ],
+      "checkpoint_byte_range_inclusive": [
+        154621480,
+        154627623
+      ],
+      "source_header_path": "weights/mamba-130m/header.json"
+    },
+    {
+      "original_key": "backbone.layers.0.mixer.dt_proj.weight",
+      "shape": [
+        1536,
+        48
+      ],
+      "dtype": "float32",
+      "scalar_count": 73728,
+      "scalar_start": 27648,
+      "scalar_stop_exclusive": 101376,
+      "storage_dtype": "F32",
+      "source_path": "weights/mamba-130m/dt_proj.bin",
+      "source_sha256": "18e0245acd7f233ee5420a148ca89a97996ed81fb6715819b7a23bd7e64dd60b",
+      "source_byte_range_inclusive": [
+        6144,
+        301055
+      ],
+      "checkpoint_byte_range_inclusive": [
+        154627624,
+        154922535
+      ],
+      "source_header_path": "weights/mamba-130m/header.json"
+    },
+    {
+      "original_key": "backbone.layers.0.mixer.x_proj.weight",
+      "shape": [
+        80,
+        1536
+      ],
+      "dtype": "float32",
+      "scalar_count": 122880,
+      "scalar_start": 101376,
+      "scalar_stop_exclusive": 224256,
+      "storage_dtype": "F32",
+      "source_path": "weights/mamba-130m/x_proj.bin",
+      "source_sha256": "f40d72782af94e2f7e41fd4fad73ec25f3b5ff8cebf7505a27501fdc36abfa14",
+      "source_byte_range_inclusive": [
+        0,
+        491519
+      ],
+      "checkpoint_byte_range_inclusive": [
+        169078312,
+        169569831
+      ],
+      "source_header_path": "weights/mamba-130m/header.json"
+    }
+  ]
+}

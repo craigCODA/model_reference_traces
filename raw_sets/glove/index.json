@@ -1,0 +1,25 @@
+{
+  "model": "Stanford GloVe 6B 50d, Gensim word2vec-format repack",
+  "scalar_count": 20000000,
+  "sources": [
+    "weights/glove-wiki-gigaword-50/glove-wiki-gigaword-50.gz"
+  ],
+  "source_matrix_shape": [
+    400000,
+    50
+  ],
+  "array_shape": [
+    20000000
+  ],
+  "dtype": "|S16",
+  "max_source_literal_bytes": 11,
+  "formats": {
+    "values.npy": "Flat NumPy array of fixed-width ASCII byte strings. Each element preserves one original decimal literal and has NUL padding up to 16 bytes.",
+    "vocabulary.tsv": "UTF-8 TSV with a header and one zero-based row index per vocabulary token in source order."
+  },
+  "lookup": {
+    "scalar_index": "50 * word_row + dimension, with zero-based word_row and dimension.",
+    "source_line": "word_row + 2 in the decompressed source text.",
+    "element_example": "values[50 * word_row + dimension].decode('ascii')"
+  }
+}

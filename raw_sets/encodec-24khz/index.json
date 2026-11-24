@@ -1,0 +1,65 @@
+{
+  "model": "Meta EnCodec 24 kHz",
+  "model_id": "encodec-24khz",
+  "scalar_count": 262144,
+  "array": "values.npy",
+  "array_shape": [
+    262144
+  ],
+  "array_dtype": "float32",
+  "array_dtype_descriptor": "<f4",
+  "array_sha256": "628a1568a031452fbd6b6d71dc5f92323baf3ad14541dad619d0880632616e57",
+  "checkpoint_url": "https://huggingface.co/facebook/encodec_24khz/resolve/1d4c7cf1aca62eee005a2dd499a0cdfe5abf92b9/model.safetensors",
+  "source_paths_relative_to": "model-reference-traces project directory",
+  "scalar_order": "Zero-based offsets into the C-order flattened array. Scalar stops are exclusive.",
+  "byte_order": "Little-endian. Source byte ranges are inclusive and zero-based within each file.",
+  "scope": "The first two codebooks each contain 1,024 vectors of 128 scalars in code ID order.",
+  "components": [
+    {
+      "original_key": "quantizer.layers.0.codebook.embed",
+      "shape": [
+        1024,
+        128
+      ],
+      "dtype": "float32",
+      "scalar_count": 131072,
+      "scalar_start": 0,
+      "scalar_stop_exclusive": 131072,
+      "storage_dtype": "F32",
+      "source_path": "weights/encodec-24khz/codebook_0.bin",
+      "source_sha256": "e8dcfe68ad3f9a837dbe097da425a74a29bb2d8db9496e6dc7d502cf5ebb7adb",
+      "source_byte_range_inclusive": [
+        0,
+        524287
+      ],
+      "checkpoint_byte_range_inclusive": [
+        59438072,
+        59962359
+      ],
+      "source_header_path": "weights/encodec-24khz/header.json"
+    },
+    {
+      "original_key": "quantizer.layers.1.codebook.embed",
+      "shape": [
+        1024,
+        128
+      ],
+      "dtype": "float32",
+      "scalar_count": 131072,
+      "scalar_start": 131072,
+      "scalar_stop_exclusive": 262144,
+      "storage_dtype": "F32",
+      "source_path": "weights/encodec-24khz/codebook_1.bin",
+      "source_sha256": "4195180ccbfd177228d413cc329033bada564a4079fd4b3755eafdb36f5f1b65",
+      "source_byte_range_inclusive": [
+        0,
+        524287
+      ],
+      "checkpoint_byte_range_inclusive": [
+        60490748,
+        61015035
+      ],
+      "source_header_path": "weights/encodec-24khz/header.json"
+    }
+  ]
+}

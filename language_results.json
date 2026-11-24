@@ -1,0 +1,1213 @@
+{
+  "jieba": {
+    "model": "Jieba v0.42.1 finalseg",
+    "architecture": "Four-state character HMM with B/M/E/S tags, looked-up natural-log initial, transition and emission weights, and Viterbi decoding with E/S as terminal states.",
+    "input_scope": "Direct finalseg HMM on contiguous Han text.",
+    "scoring": "The path score uses the release tables as published. Exponentiated emission weights sum above one in all four states.",
+    "sources": [
+      "https://github.com/fxsjy/jieba/tree/v0.42.1/jieba/finalseg",
+      "https://github.com/fxsjy/jieba/blob/v0.42.1/jieba/finalseg/__init__.py"
+    ],
+    "weights": [
+      {
+        "path": "weights/jieba-v0.42.1/prob_start.py",
+        "origin": "https://raw.githubusercontent.com/fxsjy/jieba/v0.42.1/jieba/finalseg/prob_start.py",
+        "bytes": 93,
+        "sha256": "14c5706ced5cd3b42eb4873d4b88f7f52a7bdf80fbd767bc4423d361e20c5330"
+      },
+      {
+        "path": "weights/jieba-v0.42.1/prob_trans.py",
+        "origin": "https://raw.githubusercontent.com/fxsjy/jieba/v0.42.1/jieba/finalseg/prob_trans.py",
+        "bytes": 241,
+        "sha256": "54dfbc252ed71480d4f0cdfdf516ecfbe44efd0f6c3c64b158e7039f2906c91b"
+      },
+      {
+        "path": "weights/jieba-v0.42.1/prob_emit.py",
+        "origin": "https://raw.githubusercontent.com/fxsjy/jieba/v0.42.1/jieba/finalseg/prob_emit.py",
+        "bytes": 1321732,
+        "sha256": "27d46b1c9efe4dd148fde8be042a21be40e3562d0c7f1273f9de7abae12ebb8d"
+      }
+    ],
+    "emission_rows_by_state": {
+      "B": 6857,
+      "E": 7439,
+      "M": 6409,
+      "S": 14519
+    },
+    "weight_table_exp_sums": {
+      "initial": 1.0,
+      "transition_by_state": {
+        "B": 1.0000000000000004,
+        "E": 1.0,
+        "M": 1.0,
+        "S": 1.0
+      },
+      "emission_by_state": {
+        "B": 1.313277270010211,
+        "E": 1.3525826041563518,
+        "M": 1.2977681492950934,
+        "S": 1.1518360114255386
+      }
+    },
+    "examples": [
+      {
+        "input": "南京市长江大桥",
+        "viterbi_words": [
+          "南京市",
+          "长江大桥"
+        ],
+        "viterbi_tags": "BMEBMME",
+        "viterbi_path_ln_score": -45.28005479509219,
+        "winning_path_terms": [
+          {
+            "character": "南",
+            "tag": "B",
+            "start_or_transition_ln": -0.26268660809250016,
+            "emission_ln": -6.150782993727183,
+            "cumulative_ln": -6.413469601819683
+          },
+          {
+            "character": "京",
+            "tag": "M",
+            "start_or_transition_ln": -0.916290731874155,
+            "emission_ln": -5.948644611690726,
+            "cumulative_ln": -13.278404945384565
+          },
+          {
+            "character": "市",
+            "tag": "E",
+            "start_or_transition_ln": -0.33344856811948514,
+            "emission_ln": -5.446323764573815,
+            "cumulative_ln": -19.058177278077864
+          },
+          {
+            "character": "长",
+            "tag": "B",
+            "start_or_transition_ln": -0.5897149736854513,
+            "emission_ln": -6.002790591841816,
+            "cumulative_ln": -25.650682843605132
+          },
+          {
+            "character": "江",
+            "tag": "M",
+            "start_or_transition_ln": -0.916290731874155,
+            "emission_ln": -5.949578395505248,
+            "cumulative_ln": -32.51655197098454
+          },
+          {
+            "character": "大",
+            "tag": "M",
+            "start_or_transition_ln": -1.2603623820268226,
+            "emission_ln": -3.8459362685920344,
+            "cumulative_ln": -37.62285062160339
+          },
+          {
+            "character": "桥",
+            "tag": "E",
+            "start_or_transition_ln": -0.33344856811948514,
+            "emission_ln": -7.323755605369317,
+            "cumulative_ln": -45.28005479509219
+          }
+        ],
+        "top_segmentations_by_exhaustive_score": [
+          {
+            "words": [
+              "南京市",
+              "长江大桥"
+            ],
+            "tags": "BMEBMME",
+            "path_ln_score": -45.28005479509219
+          },
+          {
+            "words": [
+              "南京市",
+              "长江",
+              "大桥"
+            ],
+            "tags": "BMEBEBE",
+            "path_ln_score": -45.755413693069634
+          },
+          {
+            "words": [
+              "南京",
+              "市长",
+              "江大桥"
+            ],
+            "tags": "BEBEBME",
+            "path_ln_score": -45.92604883224406
+          }
+        ],
+        "lead_over_runner_up_ln": 0.47535889797744346,
+        "exhaustive_paths_checked": 64,
+        "exhaustive_winner_vs_viterbi_abs_error_ln": 0.0
+      },
+      {
+        "input": "研究生命起源",
+        "viterbi_words": [
+          "研究",
+          "生命",
+          "起源"
+        ],
+        "viterbi_tags": "BEBEBE",
+        "viterbi_path_ln_score": -41.07721990067826,
+        "winning_path_terms": [
+          {
+            "character": "研",
+            "tag": "B",
+            "start_or_transition_ln": -0.26268660809250016,
+            "emission_ln": -6.454286082611493,
+            "cumulative_ln": -6.716972690703994
+          },
+          {
+            "character": "究",
+            "tag": "E",
+            "start_or_transition_ln": -0.51082562376599,
+            "emission_ln": -6.739148021212019,
+            "cumulative_ln": -13.966946335682003
+          },
+          {
+            "character": "生",
+            "tag": "B",
+            "start_or_transition_ln": -0.5897149736854513,
+            "emission_ln": -5.436436910162081,
+            "cumulative_ln": -19.993098219529536
+          },
+          {
+            "character": "命",
+            "tag": "E",
+            "start_or_transition_ln": -0.51082562376599,
+            "emission_ln": -6.41379098566298,
+            "cumulative_ln": -26.917714828958506
+          },
+          {
+            "character": "起",
+            "tag": "B",
+            "start_or_transition_ln": -0.5897149736854513,
+            "emission_ln": -6.272793275959149,
+            "cumulative_ln": -33.78022307860311
+          },
+          {
+            "character": "源",
+            "tag": "E",
+            "start_or_transition_ln": -0.51082562376599,
+            "emission_ln": -6.78617119830916,
+            "cumulative_ln": -41.07721990067826
+          }
+        ],
+        "top_segmentations_by_exhaustive_score": [
+          {
+            "words": [
+              "研究",
+              "生命",
+              "起源"
+            ],
+            "tags": "BEBEBE",
+            "path_ln_score": -41.07721990067826
+          },
+          {
+            "words": [
+              "研究生命",
+              "起源"
+            ],
+            "tags": "BMMEBE",
+            "path_ln_score": -42.094678025809685
+          },
+          {
+            "words": [
+              "研究生",
+              "命",
+              "起源"
+            ],
+            "tags": "BMESBE",
+            "path_ln_score": -42.74515558341768
+          }
+        ],
+        "lead_over_runner_up_ln": 1.0174581251314265,
+        "exhaustive_paths_checked": 32,
+        "exhaustive_winner_vs_viterbi_abs_error_ln": 0.0
+      },
+      {
+        "input": "我爱北京天安门",
+        "viterbi_words": [
+          "我",
+          "爱北京",
+          "天安门"
+        ],
+        "viterbi_tags": "SBMEBME",
+        "viterbi_path_ln_score": -45.04378933084046,
+        "winning_path_terms": [
+          {
+            "character": "我",
+            "tag": "S",
+            "start_or_transition_ln": -1.4652633398537678,
+            "emission_ln": -4.5118304119971455,
+            "cumulative_ln": -5.977093751850913
+          },
+          {
+            "character": "爱",
+            "tag": "B",
+            "start_or_transition_ln": -0.7211965654669841,
+            "emission_ln": -7.491912771008333,
+            "cumulative_ln": -14.19020308832623
+          },
+          {
+            "character": "北",
+            "tag": "M",
+            "start_or_transition_ln": -0.916290731874155,
+            "emission_ln": -5.363827102761087,
+            "cumulative_ln": -20.47032092296147
+          },
+          {
+            "character": "京",
+            "tag": "E",
+            "start_or_transition_ln": -0.33344856811948514,
+            "emission_ln": -6.5387709322987195,
+            "cumulative_ln": -27.342540423379674
+          },
+          {
+            "character": "天",
+            "tag": "B",
+            "start_or_transition_ln": -0.5897149736854513,
+            "emission_ln": -5.568302785734536,
+            "cumulative_ln": -33.500558182799665
+          },
+          {
+            "character": "安",
+            "tag": "M",
+            "start_or_transition_ln": -0.916290731874155,
+            "emission_ln": -4.737456220217271,
+            "cumulative_ln": -39.15430513489109
+          },
+          {
+            "character": "门",
+            "tag": "E",
+            "start_or_transition_ln": -0.33344856811948514,
+            "emission_ln": -5.556035627829886,
+            "cumulative_ln": -45.04378933084046
+          }
+        ],
+        "top_segmentations_by_exhaustive_score": [
+          {
+            "words": [
+              "我",
+              "爱北京",
+              "天安门"
+            ],
+            "tags": "SBMEBME",
+            "path_ln_score": -45.04378933084046
+          },
+          {
+            "words": [
+              "我爱北京",
+              "天安门"
+            ],
+            "tags": "BMMEBME",
+            "path_ln_score": -45.12061433318297
+          },
+          {
+            "words": [
+              "我",
+              "爱",
+              "北京",
+              "天安门"
+            ],
+            "tags": "SSBEBME",
+            "path_ln_score": -45.64945871824907
+          }
+        ],
+        "lead_over_runner_up_ln": 0.07682500234250966,
+        "exhaustive_paths_checked": 64,
+        "exhaustive_winner_vs_viterbi_abs_error_ln": 0.0
+      }
+    ]
+  },
+  "riva_arpa": {
+    "model": "NVIDIA Riva ASR English LM deployable_v1.0 pruned trigram",
+    "architecture": "Word-level backoff trigram. Query the longest stored suffix including the target word and add base-10 backoff weights for the skipped histories.",
+    "training_data": "LibriSpeech, Switchboard and Fisher transcriptions, per NVIDIA's model listing.",
+    "tokenization": "Whitespace splitting, uppercase model entries, <s> and </s> sentence markers, and <UNK> for words outside the vocabulary.",
+    "sources": [
+      "https://catalog.ngc.nvidia.com/orgs/nvidia/tao/models/speechtotext_english_lm/-/file-browser",
+      "https://kheafield.com/papers/avenue/kenlm.pdf"
+    ],
+    "weights": [
+      {
+        "path": "weights/nvidia-riva-arpa/3-gram.pruned.3e-7.arpa",
+        "origin": "https://api.ngc.nvidia.com/v2/models/nvidia/tao/speechtotext_english_lm/versions/deployable_v1.0/files/3-gram.pruned.3e-7.arpa",
+        "bytes": 38757479,
+        "sha256": "30a34a3fbb83fd77ed95738ab57d84c37565a2cd02a6c9472f3020c2681bb3c7"
+      }
+    ],
+    "ngram_rows_by_order": {
+      "1": 200003,
+      "2": 1016673,
+      "3": 340026
+    },
+    "next_word_prefix": "I want to",
+    "next_word_effective_history": [
+      "WANT",
+      "TO"
+    ],
+    "next_word_candidates": [
+      {
+        "candidate": "go",
+        "token": "GO",
+        "model_token": "GO",
+        "matched_ngram": [
+          "WANT",
+          "TO",
+          "GO"
+        ],
+        "matched_order": 3,
+        "matched_log10_probability": -1.186616,
+        "backoff_terms": [],
+        "log10_probability": -1.186616
+      },
+      {
+        "candidate": "zzzxnonwordzzzx",
+        "token": "ZZZXNONWORDZZZX",
+        "model_token": "<UNK>",
+        "matched_ngram": [
+          "TO",
+          "<UNK>"
+        ],
+        "matched_order": 2,
+        "matched_log10_probability": -2.667466,
+        "backoff_terms": [
+          {
+            "history": [
+              "WANT",
+              "TO"
+            ],
+            "log10_weight": -0.3582956,
+            "history_exists": true
+          }
+        ],
+        "log10_probability": -3.0257616
+      },
+      {
+        "candidate": "stay",
+        "token": "STAY",
+        "model_token": "STAY",
+        "matched_ngram": [
+          "TO",
+          "STAY"
+        ],
+        "matched_order": 2,
+        "matched_log10_probability": -2.993168,
+        "backoff_terms": [
+          {
+            "history": [
+              "WANT",
+              "TO"
+            ],
+            "log10_weight": -0.3582956,
+            "history_exists": true
+          }
+        ],
+        "log10_probability": -3.3514635999999998
+      },
+      {
+        "candidate": "eat",
+        "token": "EAT",
+        "model_token": "EAT",
+        "matched_ngram": [
+          "TO",
+          "EAT"
+        ],
+        "matched_order": 2,
+        "matched_log10_probability": -3.000103,
+        "backoff_terms": [
+          {
+            "history": [
+              "WANT",
+              "TO"
+            ],
+            "log10_weight": -0.3582956,
+            "history_exists": true
+          }
+        ],
+        "log10_probability": -3.3583986
+      },
+      {
+        "candidate": "Alice",
+        "token": "ALICE",
+        "model_token": "ALICE",
+        "matched_ngram": [
+          "TO",
+          "ALICE"
+        ],
+        "matched_order": 2,
+        "matched_log10_probability": -3.857595,
+        "backoff_terms": [
+          {
+            "history": [
+              "WANT",
+              "TO"
+            ],
+            "log10_weight": -0.3582956,
+            "history_exists": true
+          }
+        ],
+        "log10_probability": -4.2158906
+      },
+      {
+        "candidate": "browse",
+        "token": "BROWSE",
+        "model_token": "BROWSE",
+        "matched_ngram": [
+          "TO",
+          "BROWSE"
+        ],
+        "matched_order": 2,
+        "matched_log10_probability": -4.31773,
+        "backoff_terms": [
+          {
+            "history": [
+              "WANT",
+              "TO"
+            ],
+            "log10_weight": -0.3582956,
+            "history_exists": true
+          }
+        ],
+        "log10_probability": -4.6760256
+      },
+      {
+        "candidate": "Craig",
+        "token": "CRAIG",
+        "model_token": "CRAIG",
+        "matched_ngram": [
+          "CRAIG"
+        ],
+        "matched_order": 1,
+        "matched_log10_probability": -4.679318,
+        "backoff_terms": [
+          {
+            "history": [
+              "WANT",
+              "TO"
+            ],
+            "log10_weight": -0.3582956,
+            "history_exists": true
+          },
+          {
+            "history": [
+              "TO"
+            ],
+            "log10_weight": -0.5257586,
+            "history_exists": true
+          }
+        ],
+        "log10_probability": -5.5633722
+      }
+    ],
+    "sentence_examples": [
+      {
+        "input": "Craig went to the store",
+        "model_tokens": [
+          "<s>",
+          "CRAIG",
+          "WENT",
+          "TO",
+          "THE",
+          "STORE",
+          "</s>"
+        ],
+        "log10_probability_including_end_token": -14.87934925,
+        "token_scores": [
+          {
+            "token": "CRAIG",
+            "model_token": "CRAIG",
+            "matched_ngram": [
+              "<s>",
+              "CRAIG"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -4.777326,
+            "backoff_terms": [],
+            "log10_probability": -4.777326
+          },
+          {
+            "token": "WENT",
+            "model_token": "WENT",
+            "matched_ngram": [
+              "WENT"
+            ],
+            "matched_order": 1,
+            "matched_log10_probability": -3.090991,
+            "backoff_terms": [
+              {
+                "history": [
+                  "<s>",
+                  "CRAIG"
+                ],
+                "log10_weight": 0.0,
+                "history_exists": true
+              },
+              {
+                "history": [
+                  "CRAIG"
+                ],
+                "log10_weight": -0.1561604,
+                "history_exists": true
+              }
+            ],
+            "log10_probability": -3.2471514
+          },
+          {
+            "token": "TO",
+            "model_token": "TO",
+            "matched_ngram": [
+              "WENT",
+              "TO"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -1.092226,
+            "backoff_terms": [
+              {
+                "history": [
+                  "CRAIG",
+                  "WENT"
+                ],
+                "log10_weight": 0.0,
+                "history_exists": false
+              }
+            ],
+            "log10_probability": -1.092226
+          },
+          {
+            "token": "THE",
+            "model_token": "THE",
+            "matched_ngram": [
+              "WENT",
+              "TO",
+              "THE"
+            ],
+            "matched_order": 3,
+            "matched_log10_probability": -0.532364,
+            "backoff_terms": [],
+            "log10_probability": -0.532364
+          },
+          {
+            "token": "STORE",
+            "model_token": "STORE",
+            "matched_ngram": [
+              "THE",
+              "STORE"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -3.95273,
+            "backoff_terms": [
+              {
+                "history": [
+                  "TO",
+                  "THE"
+                ],
+                "log10_weight": -0.08737285,
+                "history_exists": true
+              }
+            ],
+            "log10_probability": -4.04010285
+          },
+          {
+            "token": "</s>",
+            "model_token": "</s>",
+            "matched_ngram": [
+              "STORE",
+              "</s>"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -1.190179,
+            "backoff_terms": [
+              {
+                "history": [
+                  "THE",
+                  "STORE"
+                ],
+                "log10_weight": 0.0,
+                "history_exists": true
+              }
+            ],
+            "log10_probability": -1.190179
+          }
+        ]
+      },
+      {
+        "input": "Alice went to the store",
+        "model_tokens": [
+          "<s>",
+          "ALICE",
+          "WENT",
+          "TO",
+          "THE",
+          "STORE",
+          "</s>"
+        ],
+        "log10_probability_including_end_token": -13.18554585,
+        "token_scores": [
+          {
+            "token": "ALICE",
+            "model_token": "ALICE",
+            "matched_ngram": [
+              "<s>",
+              "ALICE"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -3.92302,
+            "backoff_terms": [],
+            "log10_probability": -3.92302
+          },
+          {
+            "token": "WENT",
+            "model_token": "WENT",
+            "matched_ngram": [
+              "ALICE",
+              "WENT"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -2.407654,
+            "backoff_terms": [
+              {
+                "history": [
+                  "<s>",
+                  "ALICE"
+                ],
+                "log10_weight": 0.0,
+                "history_exists": true
+              }
+            ],
+            "log10_probability": -2.407654
+          },
+          {
+            "token": "TO",
+            "model_token": "TO",
+            "matched_ngram": [
+              "WENT",
+              "TO"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -1.092226,
+            "backoff_terms": [
+              {
+                "history": [
+                  "ALICE",
+                  "WENT"
+                ],
+                "log10_weight": 0.0,
+                "history_exists": true
+              }
+            ],
+            "log10_probability": -1.092226
+          },
+          {
+            "token": "THE",
+            "model_token": "THE",
+            "matched_ngram": [
+              "WENT",
+              "TO",
+              "THE"
+            ],
+            "matched_order": 3,
+            "matched_log10_probability": -0.532364,
+            "backoff_terms": [],
+            "log10_probability": -0.532364
+          },
+          {
+            "token": "STORE",
+            "model_token": "STORE",
+            "matched_ngram": [
+              "THE",
+              "STORE"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -3.95273,
+            "backoff_terms": [
+              {
+                "history": [
+                  "TO",
+                  "THE"
+                ],
+                "log10_weight": -0.08737285,
+                "history_exists": true
+              }
+            ],
+            "log10_probability": -4.04010285
+          },
+          {
+            "token": "</s>",
+            "model_token": "</s>",
+            "matched_ngram": [
+              "STORE",
+              "</s>"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -1.190179,
+            "backoff_terms": [
+              {
+                "history": [
+                  "THE",
+                  "STORE"
+                ],
+                "log10_weight": 0.0,
+                "history_exists": true
+              }
+            ],
+            "log10_probability": -1.190179
+          }
+        ]
+      },
+      {
+        "input": "Craig spoke with Alice",
+        "model_tokens": [
+          "<s>",
+          "CRAIG",
+          "SPOKE",
+          "WITH",
+          "ALICE",
+          "</s>"
+        ],
+        "log10_probability_including_end_token": -15.2083695,
+        "token_scores": [
+          {
+            "token": "CRAIG",
+            "model_token": "CRAIG",
+            "matched_ngram": [
+              "<s>",
+              "CRAIG"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -4.777326,
+            "backoff_terms": [],
+            "log10_probability": -4.777326
+          },
+          {
+            "token": "SPOKE",
+            "model_token": "SPOKE",
+            "matched_ngram": [
+              "SPOKE"
+            ],
+            "matched_order": 1,
+            "matched_log10_probability": -3.45812,
+            "backoff_terms": [
+              {
+                "history": [
+                  "<s>",
+                  "CRAIG"
+                ],
+                "log10_weight": 0.0,
+                "history_exists": true
+              },
+              {
+                "history": [
+                  "CRAIG"
+                ],
+                "log10_weight": -0.1561604,
+                "history_exists": true
+              }
+            ],
+            "log10_probability": -3.6142804
+          },
+          {
+            "token": "WITH",
+            "model_token": "WITH",
+            "matched_ngram": [
+              "SPOKE",
+              "WITH"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -1.442108,
+            "backoff_terms": [
+              {
+                "history": [
+                  "CRAIG",
+                  "SPOKE"
+                ],
+                "log10_weight": 0.0,
+                "history_exists": false
+              }
+            ],
+            "log10_probability": -1.442108
+          },
+          {
+            "token": "ALICE",
+            "model_token": "ALICE",
+            "matched_ngram": [
+              "WITH",
+              "ALICE"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -3.771804,
+            "backoff_terms": [
+              {
+                "history": [
+                  "SPOKE",
+                  "WITH"
+                ],
+                "log10_weight": -0.2962221,
+                "history_exists": true
+              }
+            ],
+            "log10_probability": -4.0680261
+          },
+          {
+            "token": "</s>",
+            "model_token": "</s>",
+            "matched_ngram": [
+              "ALICE",
+              "</s>"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -1.306629,
+            "backoff_terms": [
+              {
+                "history": [
+                  "WITH",
+                  "ALICE"
+                ],
+                "log10_weight": 0.0,
+                "history_exists": true
+              }
+            ],
+            "log10_probability": -1.306629
+          }
+        ]
+      },
+      {
+        "input": "Alice spoke with Craig",
+        "model_tokens": [
+          "<s>",
+          "ALICE",
+          "SPOKE",
+          "WITH",
+          "CRAIG",
+          "</s>"
+        ],
+        "log10_probability_including_end_token": -14.5958371,
+        "token_scores": [
+          {
+            "token": "ALICE",
+            "model_token": "ALICE",
+            "matched_ngram": [
+              "<s>",
+              "ALICE"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -3.92302,
+            "backoff_terms": [],
+            "log10_probability": -3.92302
+          },
+          {
+            "token": "SPOKE",
+            "model_token": "SPOKE",
+            "matched_ngram": [
+              "ALICE",
+              "SPOKE"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -2.698383,
+            "backoff_terms": [
+              {
+                "history": [
+                  "<s>",
+                  "ALICE"
+                ],
+                "log10_weight": 0.0,
+                "history_exists": true
+              }
+            ],
+            "log10_probability": -2.698383
+          },
+          {
+            "token": "WITH",
+            "model_token": "WITH",
+            "matched_ngram": [
+              "SPOKE",
+              "WITH"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -1.442108,
+            "backoff_terms": [
+              {
+                "history": [
+                  "ALICE",
+                  "SPOKE"
+                ],
+                "log10_weight": 0.0,
+                "history_exists": true
+              }
+            ],
+            "log10_probability": -1.442108
+          },
+          {
+            "token": "CRAIG",
+            "model_token": "CRAIG",
+            "matched_ngram": [
+              "CRAIG"
+            ],
+            "matched_order": 1,
+            "matched_log10_probability": -4.679318,
+            "backoff_terms": [
+              {
+                "history": [
+                  "SPOKE",
+                  "WITH"
+                ],
+                "log10_weight": -0.2962221,
+                "history_exists": true
+              },
+              {
+                "history": [
+                  "WITH"
+                ],
+                "log10_weight": -0.427907,
+                "history_exists": true
+              }
+            ],
+            "log10_probability": -5.4034471
+          },
+          {
+            "token": "</s>",
+            "model_token": "</s>",
+            "matched_ngram": [
+              "CRAIG",
+              "</s>"
+            ],
+            "matched_order": 2,
+            "matched_log10_probability": -1.128879,
+            "backoff_terms": [
+              {
+                "history": [
+                  "WITH",
+                  "CRAIG"
+                ],
+                "log10_weight": 0.0,
+                "history_exists": false
+              }
+            ],
+            "log10_probability": -1.128879
+          }
+        ]
+      }
+    ],
+    "validation_probability_mass_excluding_start_token": [
+      {
+        "history": [],
+        "total_probability": 1.0000000003424196
+      },
+      {
+        "history": [
+          "TO"
+        ],
+        "total_probability": 0.999999991560962
+      },
+      {
+        "history": [
+          "WANT",
+          "TO"
+        ],
+        "total_probability": 0.9999999847728089
+      },
+      {
+        "history": [
+          "WENT",
+          "TO"
+        ],
+        "total_probability": 1.0000000583868003
+      }
+    ]
+  },
+  "glove": {
+    "model": "Stanford GloVe 6B 50d, Gensim word2vec-format repack",
+    "architecture": "Learned static 50-dimensional word representations from weighted log-bilinear regression on global co-occurrence counts. Inference is vector lookup. The phrase probe uses a plain coordinate mean of the looked-up word vectors followed by cosine or Euclidean scoring.",
+    "training_data": "Uncased Wikipedia 2014 and Gigaword 5, approximately six billion tokens.",
+    "sources": [
+      "https://nlp.stanford.edu/projects/glove/",
+      "https://nlp.stanford.edu/pubs/glove.pdf",
+      "https://github.com/piskvorky/gensim-data/releases/tag/glove-wiki-gigaword-50",
+      "https://github.com/piskvorky/gensim-data/blob/master/list.json"
+    ],
+    "weights": [
+      {
+        "path": "weights/glove-wiki-gigaword-50/glove-wiki-gigaword-50.gz",
+        "origin": "https://github.com/piskvorky/gensim-data/releases/download/glove-wiki-gigaword-50/glove-wiki-gigaword-50.gz",
+        "bytes": 69182535,
+        "sha256": "5c55f98957aa9fed8d2ac5fb1dcff57af3b23c5a3ee7af3f7945f8d49198eb24",
+        "md5": "c289bc5d7f2f02c6dc9f2f9b67641813"
+      }
+    ],
+    "dimensions": 50,
+    "vocabulary_size": 400000,
+    "required_rows_found": [
+      "alice",
+      "and",
+      "bob",
+      "carol",
+      "cat",
+      "chased",
+      "craig",
+      "dog",
+      "greeted",
+      "london",
+      "met",
+      "robert",
+      "talked",
+      "the"
+    ],
+    "examples_ranked_by_cosine": [
+      {
+        "query": "Craig",
+        "query_vector_norm": 4.751808456792951,
+        "candidate_scores": [
+          {
+            "reference": "Craig",
+            "cosine": 0.9999999999999999,
+            "euclidean_distance": 0.0,
+            "dot_product": 22.579683610049,
+            "reference_vector_norm": 4.751808456792951
+          },
+          {
+            "reference": "Robert",
+            "cosine": 0.6129532340348152,
+            "euclidean_distance": 4.304450328766031,
+            "dot_product": 14.61526584198,
+            "reference_vector_norm": 5.01788209374483
+          },
+          {
+            "reference": "Bob",
+            "cosine": 0.6078719502423107,
+            "euclidean_distance": 4.191339125579166,
+            "dot_product": 13.615190058848,
+            "reference_vector_norm": 4.713599492241331
+          },
+          {
+            "reference": "Carol",
+            "cosine": 0.4868319492636975,
+            "euclidean_distance": 4.491958284614546,
+            "dot_product": 9.324455155845,
+            "reference_vector_norm": 4.030746324486105
+          },
+          {
+            "reference": "Alice",
+            "cosine": 0.4360075192447983,
+            "euclidean_distance": 4.704386972138772,
+            "dot_product": 8.35451451416,
+            "reference_vector_norm": 4.032443701020512
+          },
+          {
+            "reference": "London",
+            "cosine": 0.35451442478910655,
+            "euclidean_distance": 5.7918818696038175,
+            "dot_product": 9.096694974376,
+            "reference_vector_norm": 5.399963141554617
+          },
+          {
+            "reference": "dog",
+            "cosine": 0.2786930143446864,
+            "euclidean_distance": 5.77176856427176,
+            "dot_product": 6.433489621357801,
+            "reference_vector_norm": 4.858045696798486
+          }
+        ]
+      },
+      {
+        "query": "Alice",
+        "query_vector_norm": 4.032443701020512,
+        "candidate_scores": [
+          {
+            "reference": "Alice",
+            "cosine": 0.9999999999999998,
+            "euclidean_distance": 0.0,
+            "dot_product": 16.2606022019,
+            "reference_vector_norm": 4.032443701020512
+          },
+          {
+            "reference": "Carol",
+            "cosine": 0.7472052005958376,
+            "euclidean_distance": 2.8666589749463136,
+            "dot_product": 12.144892227809,
+            "reference_vector_norm": 4.030746324486105
+          },
+          {
+            "reference": "Robert",
+            "cosine": 0.5139645409456712,
+            "euclidean_distance": 4.543158558787598,
+            "dot_product": 10.39972660917,
+            "reference_vector_norm": 5.01788209374483
+          },
+          {
+            "reference": "Bob",
+            "cosine": 0.44605633683115015,
+            "euclidean_distance": 4.6391752740632395,
+            "dot_product": 8.478337575839,
+            "reference_vector_norm": 4.713599492241331
+          },
+          {
+            "reference": "Craig",
+            "cosine": 0.4360075192447983,
+            "euclidean_distance": 4.704386972138772,
+            "dot_product": 8.35451451416,
+            "reference_vector_norm": 4.751808456792951
+          },
+          {
+            "reference": "dog",
+            "cosine": 0.4113423620948099,
+            "euclidean_distance": 4.872882562166288,
+            "dot_product": 8.058112864709,
+            "reference_vector_norm": 4.858045696798486
+          },
+          {
+            "reference": "London",
+            "cosine": 0.39083489093405716,
+            "euclidean_distance": 5.329100075546566,
+            "dot_product": 8.510448258429001,
+            "reference_vector_norm": 5.399963141554617
+          }
+        ]
+      },
+      {
+        "query": "Craig met Alice",
+        "query_vector_norm": 3.4176898879252406,
+        "candidate_scores": [
+          {
+            "reference": "Alice met Craig",
+            "cosine": 1.0000000000000002,
+            "euclidean_distance": 0.0,
+            "dot_product": 11.680604170026445,
+            "reference_vector_norm": 3.4176898879252406
+          },
+          {
+            "reference": "Craig greeted Alice",
+            "cosine": 0.9118551398346586,
+            "euclidean_distance": 1.403021700294176,
+            "dot_product": 9.689693024436222,
+            "reference_vector_norm": 3.109220444153544
+          },
+          {
+            "reference": "Bob met Carol",
+            "cosine": 0.867374502374199,
+            "euclidean_distance": 1.827102432472094,
+            "dot_product": 10.766320223808778,
+            "reference_vector_norm": 3.6318507095331647
+          },
+          {
+            "reference": "Alice and Bob talked",
+            "cosine": 0.8563283720746904,
+            "euclidean_distance": 1.8179666344162124,
+            "dot_product": 9.840282990057084,
+            "reference_vector_norm": 3.3622856056466013
+          },
+          {
+            "reference": "The dog chased the cat",
+            "cosine": 0.48397240703805106,
+            "euclidean_distance": 3.6020897300297134,
+            "dot_product": 6.05661613779616,
+            "reference_vector_norm": 3.661649700442604
+          }
+        ]
+      }
+    ],
+    "validation_cosine_vs_unit_distance_identity_max_abs_error": 2.220446049250313e-16,
+    "validation_phrase_reversal_vectors_equal": true
+  }
+}
