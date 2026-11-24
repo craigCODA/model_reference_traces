@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.test-language-index-*/
+.test-response-index-*/
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm

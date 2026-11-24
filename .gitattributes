@@ -1,0 +1,12 @@
+# Preserve the original archive bytes, including line endings.
+* -text
+
+# Large original assets are stored at their original paths through Git LFS.
+raw/language.sqlite filter=lfs diff=lfs merge=lfs -text
+raw_sets/glove/values.npy filter=lfs diff=lfs merge=lfs -text
+raw_sets/inkling-2-mini/stored_bytes.bin filter=lfs diff=lfs merge=lfs -text
+raw_sets/inkling-2-mini/values.npy filter=lfs diff=lfs merge=lfs -text
+raw_sets/riva-arpa/records.tsv.gz filter=lfs diff=lfs merge=lfs -text
+raw_sets/riva-arpa/values.txt.gz filter=lfs diff=lfs merge=lfs -text
+weights/glove-wiki-gigaword-50/glove-wiki-gigaword-50.gz filter=lfs diff=lfs merge=lfs -text
+weights/nvidia-riva-arpa/3-gram.pruned.3e-7.arpa filter=lfs diff=lfs merge=lfs -text

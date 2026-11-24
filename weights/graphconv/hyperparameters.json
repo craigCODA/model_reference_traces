@@ -1,0 +1,22 @@
+{
+  "dataset": "cora",
+  "model": "graphconv",
+  "hidden_channels": 64,
+  "heads": 4,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "jk_mode": "cat",
+  "norm_type": "layer",
+  "epochs": 150,
+  "lr": 0.005,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "patience": 30,
+  "lr_scheduler": true,
+  "warmup_epochs": 5,
+  "drop_edge": 0.0,
+  "grad_clip": 1.0,
+  "feature_dropout": 0.0,
+  "edge_perturb": 0.0,
+  "seed": 42
+}
